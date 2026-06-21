@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Cavernerco Limited Bank"
+version = "1.0.0"
+id = "artifacts/cavernerco-clone"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19632
+
+[services.development]
+run = "pnpm --filter @workspace/cavernerco-clone run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/cavernerco-clone", "run", "build" ]
+publicDir = "artifacts/cavernerco-clone/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19632"
+BASE_PATH = "/"
