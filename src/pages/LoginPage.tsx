@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-// Dashboard URL — user login lives here
-const DASHBOARD_LOGIN_URL = (import.meta.env.VITE_DASHBOARD_URL || "http://localhost:5173") + "/login";
+// Dashboard URL — update this to your deployed dashboard URL
+const DASHBOARD_LOGIN_URL = (import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app") + "/login";
 
 export default function LoginPage() {
   useEffect(() => {

@@ -48,7 +48,7 @@ export default function Header() {
                 </>
               ) : (
                 <>
-                  <a href={`${import.meta.env.VITE_DASHBOARD_URL || "http://localhost:5173"}/login`} className="btn-login-header">Log In</a>
+                  <a href={`${import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app"}/login`} className="btn-login-header">Log In</a>
                   <Link href="/open-account" className="btn btn-primary btn-sm">Open Account</Link>
                 </>
               )}
@@ -83,7 +83,7 @@ export default function Header() {
             </button>
           ) : (
             <>
-              <a href={`${import.meta.env.VITE_DASHBOARD_URL || "http://localhost:5173"}/login`} className="btn btn-outline w-full" onClick={() => setMenuOpen(false)}>Log In</a>
+              <a href={`${import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app"}/login`} className="btn btn-outline w-full" onClick={() => setMenuOpen(false)}>Log In</a>
               <Link href="/open-account" className="btn btn-primary w-full" onClick={() => setMenuOpen(false)}>Open Account</Link>
             </>
           )}
