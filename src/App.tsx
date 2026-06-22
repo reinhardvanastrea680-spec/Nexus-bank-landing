@@ -24,7 +24,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 import "./index.css";
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const base = "";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
