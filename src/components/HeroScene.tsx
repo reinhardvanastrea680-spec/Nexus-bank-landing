@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CARD_COLORS = [
   ["#1d4ed8", "#0891b2"],
