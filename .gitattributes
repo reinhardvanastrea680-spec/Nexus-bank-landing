@@ -1,0 +1,22 @@
+# Force LF line endings for all text files — prevents BOM and CRLF issues on Windows
+* text=auto eol=lf
+
+# Explicitly mark these as text files with LF
+*.tsx text eol=lf
+*.ts  text eol=lf
+*.css text eol=lf
+*.js  text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.md  text eol=lf
+
+# Binary files — never touch line endings
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
