@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Nexus Bank — Secure Online Banking</title>
     <meta name="description" content="Nexus Bank — Secure online banking at your fingertips." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Nexus Bank — Secure Online Banking" />
-    <meta property="og:description" content="Nexus Bank — Secure online banking at your fingertips." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nexus Bank — Secure Online Banking" />
-    <meta name="twitter:description" content="Nexus Bank — Secure online banking at your fingertips." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Fonts loaded non-blocking; system fonts used as fallback if offline -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
@@ -22,6 +17,17 @@
       <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
     </noscript>
+    <style>
+      /* Immediate render — no flash of invisible text */
+      body { margin: 0; background: #071a3e; }
+      #root:empty::after {
+        content: '';
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background: #071a3e;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
