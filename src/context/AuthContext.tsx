@@ -1,5 +1,4 @@
-import { createContext, useContext, useEffect, useState, useMemo, useCallback } from "react";
-import { apiGet, apiPost } from "../lib/api";
+import { createContext, useContext, useState, useMemo, useCallback } from "react";
 
 interface User {
   id: number;
@@ -21,54 +20,23 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
+  // Landing page has no backend — start with loading:false so the page
+  // renders immediately. Users log in via the dashboard app.
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading] = useState(false);
 
-  useEffect(() => {
-    // Try to get user from API, but if it fails just set loading to false
-    apiGet<User>("/auth/me")
-      .then((u) => setUser(u))
-      .catch(() => {
-        // For demo purposes, don't show an error, just no user
-        setUser(null);
-      })
-      .finally(() => setLoading(false));
-  }, []);
-
-  const login = useCallback(async (username: string, password: string) => {
-    try {
-      const u = await apiPost<User>("/auth/login", { username, password });
-      setUser(u);
-    } catch (e) {
-      console.error("Login failed", e);
-      // For demo purposes, let's use a fallback user
-      setUser({
-        id: 1,
-        username: username,
-        firstName: "John",
-        lastName: "Doe",
-        email: "john@example.com",
-        accountNumber: "1234567890",
-        role: "customer",
-      });
-    }
+  const login = useCallback(async (_username: string, _password: string) => {
+    // Login redirects to the dashboard app — nothing to do here
   }, []);
 
   const logout = useCallback(async () => {
-    try {
-      await apiPost("/auth/logout", {});
-    } catch (e) {
-      console.error("Logout failed", e);
-    }
     setUser(null);
   }, []);
 
-  const value = useMemo(() => ({
-    user,
-    loading,
-    login,
-    logout
-  }), [user, loading, login, logout]);
+  const value = useMemo(
+    () => ({ user, loading, login, logout }),
+    [user, loading, login, logout]
+  );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
