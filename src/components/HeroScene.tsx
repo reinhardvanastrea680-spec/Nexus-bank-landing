@@ -7,13 +7,13 @@ const CARD_COLORS = [
 ];
 
 const TRANSACTIONS = [
-  { icon: "Ô£ê´©Å", label: "Delta Airlines", amount: "-$342.00", color: "#ef4444" },
-  { icon: "­ƒôê", label: "Investment Credit", amount: "+$1,240.00", color: "#10b981" },
-  { icon: "­ƒÅá", label: "Mortgage Payment", amount: "-$2,100.00", color: "#f59e0b" },
-  { icon: "­ƒÆ╝", label: "Salary Deposit", amount: "+$6,500.00", color: "#10b981" },
-  { icon: "­ƒøÆ", label: "Amazon Purchase", amount: "-$89.99", color: "#ef4444" },
-  { icon: "­ƒôè", label: "Dividend Income", amount: "+$480.00", color: "#10b981" },
-  { icon: "­ƒÄ»", label: "Transfer Received", amount: "+$2,400.00", color: "#10b981" },
+  { icon: "✈️", label: "Delta Airlines", amount: "-$342.00", color: "#ef4444" },
+  { icon: "📈", label: "Investment Credit", amount: "+$1,240.00", color: "#10b981" },
+  { icon: "🏠", label: "Mortgage Payment", amount: "-$2,100.00", color: "#f59e0b" },
+  { icon: "💼", label: "Salary Deposit", amount: "+$6,500.00", color: "#10b981" },
+  { icon: "🛒", label: "Amazon Purchase", amount: "-$89.99", color: "#ef4444" },
+  { icon: "📊", label: "Dividend Income", amount: "+$480.00", color: "#10b981" },
+  { icon: "🎯", label: "Transfer Received", amount: "+$2,400.00", color: "#10b981" },
 ];
 
 const CHART_POINTS = [
@@ -141,7 +141,7 @@ export default function HeroScene() {
           <AnimatedBalance target={48294} />
         </div>
         <div className="scene-balance-change">
-          <span className="up-arrow">Ôåæ</span> +4.2% this month
+          <span className="up-arrow">↑</span> +4.2% this month
         </div>
       </div>
 
@@ -187,7 +187,7 @@ export default function HeroScene() {
         <div className="tx-icon">{tx.icon}</div>
         <div className="tx-info">
           <div className="tx-label">{tx.label}</div>
-          <div className="tx-sub">Just now ┬À Nexus Bank</div>
+          <div className="tx-sub">Just now · Nexus Bank</div>
         </div>
         <div className="tx-amount" style={{ color: tx.color }}>{tx.amount}</div>
       </div>
@@ -201,7 +201,7 @@ export default function HeroScene() {
               strokeDasharray="94.2" strokeDashoffset="28" strokeLinecap="round"
               className="security-progress" />
           </svg>
-          <span style={{ fontSize: 14, position: "absolute" }}>­ƒöÆ</span>
+          <span style={{ fontSize: 14, position: "absolute" }}>🔒</span>
         </div>
         <div>
           <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Bank-Grade Security</div>
