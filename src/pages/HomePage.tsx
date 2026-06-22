@@ -26,7 +26,7 @@ const tabs = [
   {
     id: "business",
     label: "Business Banking",
-    desc: "From startup to enterprise — our business banking solutions are designed to help you grow, manage cash flow, and access capital when you need it.",
+    desc: "From startup to enterprise, our business banking solutions are designed to help you grow, manage cash flow, and access capital when you need it.",
     items: [
       { icon: "🏢", title: "Business Checking", desc: "Zero-fee business accounts with unlimited transactions" },
       { icon: "💳", title: "Corporate Cards", desc: "Business credit cards with expense management tools" },
@@ -37,7 +37,7 @@ const tabs = [
   {
     id: "digital",
     label: "Digital Banking",
-    desc: "Our mobile-first platform gives you complete control of your finances — anywhere, anytime, with bank-grade security and an intuitive interface.",
+    desc: "Our mobile platform gives you complete control of your finances, anywhere, anytime, with bank-grade security and an intuitive interface.",
     items: [
       { icon: "📱", title: "Mobile App", desc: "iOS and Android app with full account management" },
       { icon: "⚡", title: "Instant Transfers", desc: "Send money in seconds with Zelle® integration" },
@@ -100,8 +100,8 @@ export default function HomePage() {
                 Banking <span>Beyond</span><br />Boundaries
               </h1>
               <p className="hero-desc">
-                Nexus Bank delivers world-class personal and business banking
-                — secure, digital-first, and built around your life.
+                Nexus Bank delivers world-class personal and business banking,
+                secure, digital and built around your life.
               </p>
               <div className="hero-actions">
                 <Link href="/open-account" className="btn btn-gold btn-lg">Open Account</Link>
@@ -199,7 +199,7 @@ export default function HomePage() {
               <h2 className="section-title">Expert financial services tailored to your needs</h2>
             </div>
             <p className="section-subtitle" style={{ maxWidth: 360 }}>
-              From everyday checking to complex wealth management — we have a solution for every stage of your financial journey.
+              From everyday checking to complex wealth management, we have a solution for every stage of your financial journey.
             </p>
           </div>
           <div className="services-grid">
@@ -272,7 +272,7 @@ export default function HomePage() {
           <div className="section-header">
             <div>
               <div className="section-label">Why Choose Us</div>
-              <h2 className="section-title">Client-focused solutions for lasting success</h2>
+              <h2 className="section-title">Client Focused Solutions for Lasting Success</h2>
             </div>
             <p className="section-subtitle">
               Our experienced professionals deliver personalised, results-driven financial strategies.
@@ -282,7 +282,7 @@ export default function HomePage() {
             {[
               { num: "01", title: "Unmatched Security", desc: "Bank-grade 256-bit encryption and multi-factor authentication on every account.", img: `${UNSPLASH}/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80` },
               { num: "02", title: "Cash Flow Optimisation", desc: "Smart tools to improve cash flow through structured savings and budgeting strategies.", img: `${UNSPLASH}/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=700&q=80` },
-              { num: "03", title: "Always Accessible", desc: "24/7 online banking, mobile app, and customer support — banking on your schedule.", img: `${UNSPLASH}/photo-1580048915913-4f8f5cb481c4?auto=format&fit=crop&w=700&q=80` },
+              { num: "03", title: "Always Accessible", desc: "24/7 online banking, mobile app, and customer support. Banking on your schedule.", img: `${UNSPLASH}/photo-1580048915913-4f8f5cb481c4?auto=format&fit=crop&w=700&q=80` },
             ].map((w) => (
               <div className="why-card" key={w.num}>
                 <div className="why-card-img"><img src={w.img} alt={w.title} /></div>
@@ -303,7 +303,7 @@ export default function HomePage() {
           <div className="section-header" style={{ marginBottom: 32 }}>
             <div>
               <div className="section-label">Our Approach</div>
-              <h2 className="section-title">Client-centric strategy for lasting success</h2>
+              <h2 className="section-title">Client Focused Strategy for Lasting Success</h2>
             </div>
             <p className="section-subtitle">
               Our approach is built on collaboration, transparency, and deep financial expertise.
@@ -311,7 +311,7 @@ export default function HomePage() {
           </div>
           <div className="approach-grid">
             {[
-              { tag: "Transparency", title: "No Hidden Fees — Ever", desc: "Every charge is disclosed upfront. What you see is what you pay.", img: `${UNSPLASH}/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80`, accent: false },
+              { tag: "Transparency", title: "No Hidden Fees. Ever.", desc: "Every charge is disclosed upfront. What you see is what you pay.", img: `${UNSPLASH}/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Innovation", title: "We craft strategies aligned with your financial goals", desc: "Personalised plans built with AI-driven insights.", img: `${UNSPLASH}/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Accessibility", title: "Enrol for Online Banking in Minutes", desc: "100% digital, secure, and paperless account opening.", img: `${UNSPLASH}/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Partnership", title: "Your Success Is Our Success", desc: "A dedicated relationship manager for every account.", img: `${UNSPLASH}/photo-1579621970588-a35d0e7ab9b6?auto=format&fit=crop&w=600&q=80`, accent: true },
@@ -337,7 +337,7 @@ export default function HomePage() {
               <div className="section-label">Financial Facts</div>
               <h2 className="section-title">Fascinating facts that shape your financial knowledge</h2>
             </div>
-            <p className="section-subtitle">Explore how the financial world has evolved — and what it means for your future.</p>
+            <p className="section-subtitle">Explore how the financial world has evolved and what it means for your future.</p>
           </div>
           <div className="stats-row">
             {[

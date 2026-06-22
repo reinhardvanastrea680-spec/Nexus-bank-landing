@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="logo-text" style={{ color: "#fff" }}>Nexus Bank</div>
             </div>
             <p>
-              Nexus Bank is your digital-first banking partner — offering
+              Nexus Bank is your digital banking partner, offering
               secure, accessible, and innovative financial solutions for
               individuals and businesses across the United States.
               Member FDIC. Equal Housing Lender.

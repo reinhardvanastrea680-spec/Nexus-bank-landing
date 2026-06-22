@@ -9,7 +9,7 @@ export default function AboutPage() {
           <div className="page-banner-inner">
             <div className="breadcrumb"><a href="/">Home</a><span>›</span><span>About Us</span></div>
             <h1>About Nexus Bank</h1>
-            <p>Two decades of trusted banking — built on transparency, technology, and community.</p>
+            <p>Two decades of trusted banking, built on transparency, technology, and community.</p>
           </div>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function AboutPage() {
             <div>
               <div className="section-label">Our Story</div>
               <h2 className="section-title">Banking with purpose since 2005</h2>
-              <p>Nexus Bank was founded in Charlotte, North Carolina in 2005 with a single mission: to make exceptional banking accessible to everyone. What began as a community bank serving local residents has grown into a nationwide digital-first institution serving over 13 million customers.</p>
+              <p>Nexus Bank was founded in Charlotte, North Carolina in 2005 with a single mission: to make exceptional banking accessible to everyone. What began as a community bank serving local residents has grown into a nationwide digital institution serving over 13 million customers.</p>
               <p>We believe banking should be transparent, fair, and empowering. That's why we've built our platform around the customer — no hidden fees, no confusing terms, and no gatekeeping. Whether you're a first-time account holder or a seasoned investor, Nexus Bank treats every customer as a valued partner.</p>
               <div style={{ display: "flex", gap: 32, marginTop: 28 }}>
                 {[{ val: "2005", label: "Founded" }, { val: "13M+", label: "Customers" }, { val: "50+", label: "US States" }].map((s) => (

@@ -25,7 +25,7 @@ export default function InsurancePage() {
               <h2 className="section-title">Protect what matters most</h2>
               <p>Nexus Bank partners with leading insurers to offer you a full range of insurance products — from life and health to home and business. Get competitive rates and manage all your policies in one place.</p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 24, marginBottom: 28 }}>
-                {["Life Insurance — term and whole life policies","Health Insurance — individual and family plans","Home & Contents Insurance — property protection","Auto Insurance — comprehensive coverage","Business Insurance — liability and property"].map((i) => (
+                {["Life Insurance: term and whole life policies","Health Insurance: individual and family plans","Home & Contents Insurance — property protection","Auto Insurance — comprehensive coverage","Business Insurance — liability and property"].map((i) => (
                   <div key={i} style={{ display: "flex", gap: 10, fontSize: 14, color: "var(--text-body)" }}>
                     <span style={{ color: "var(--green)", fontWeight: 700 }}>✓</span>{i}
                   </div>

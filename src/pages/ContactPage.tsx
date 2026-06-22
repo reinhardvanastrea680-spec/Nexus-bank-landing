@@ -142,7 +142,7 @@ export default function ContactPage() {
             <div className="breadcrumb">
               <a href="/">Home</a><span>›</span><span>Contact</span>
             </div>
-            <h1>Talk to Us — Live</h1>
+            <h1>Talk to Us, Live</h1>
             <p>Connect with a Nexus Bank specialist instantly. Real people, real answers, 24/7.</p>
           </div>
         </div>
