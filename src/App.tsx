@@ -24,6 +24,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 import "./index.css";
 
+// Always use root — Vercel serves from "/"
 const base = "";
 
 function Layout({ children }: { children: React.ReactNode }) {
