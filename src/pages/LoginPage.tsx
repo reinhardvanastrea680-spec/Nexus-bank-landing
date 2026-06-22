@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
-const DASHBOARD_URL = import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app";
+const DASHBOARD_URL = (import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app")
+  .replace(/\/login\/?$/, "");
 const LOGIN_URL     = `${DASHBOARD_URL}/login`;
 
 /**

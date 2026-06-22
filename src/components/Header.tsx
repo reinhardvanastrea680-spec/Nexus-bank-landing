@@ -3,7 +3,9 @@ import { Link, useLocation } from "wouter";
 import { useAuth } from "../context/AuthContext";
 
 // Hardcoded dashboard URL — overridable via env var
-const DASHBOARD_URL = import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app";
+// Strip trailing /login if someone set VITE_DASHBOARD_URL with it already included
+const DASHBOARD_URL = (import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app")
+  .replace(/\/login\/?$/, "");
 const LOGIN_URL = `${DASHBOARD_URL}/login`;
 
 const navLinks = [
