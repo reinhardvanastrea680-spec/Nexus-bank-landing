@@ -13,12 +13,112 @@
     <meta name="twitter:title" content="Nexus Bank — Secure Online Banking" />
     <meta name="twitter:description" content="Nexus Bank — Secure online banking at your fingertips." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      #pre-loader {
+        position: fixed; inset: 0;
+        background: #071a3e;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        z-index: 99999; font-family: sans-serif;
+        transition: opacity 0.5s;
+      }
+      #pre-loader .nb-logo {
+        width: 56px; height: 56px; border-radius: 14px;
+        background: linear-gradient(135deg, #1d4ed8, #0891b2);
+        display: flex; align-items: center; justify-content: center;
+        color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 16px;
+        animation: nbpulse 1.5s ease-in-out infinite;
+      }
+      #pre-loader p { color: rgba(255,255,255,0.6); font-size: 14px; margin: 0; }
+      @keyframes nbpulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.6; transform:scale(0.95); } }
+
+      #load-error {
+        display: none; position: fixed; inset: 0;
+        background: #071a3e;
+        align-items: center; justify-content: center;
+        flex-direction: column; font-family: sans-serif;
+        color: #fff; text-align: center; padding: 24px; z-index: 99998;
+      }
+      #load-error h2 { font-size: 22px; margin: 0 0 10px; font-family: sans-serif; }
+      #load-error p { color: rgba(255,255,255,0.6); max-width: 420px; font-size: 14px; margin: 0 0 20px; line-height: 1.6; }
+      #load-error button {
+        padding: 12px 32px; border-radius: 100px; background: #0891b2;
+        color: #fff; border: none; font-size: 14px; font-weight: 600; cursor: pointer;
+      }
+      #load-error pre {
+        background: rgba(255,255,255,0.07); border-radius: 8px; padding: 14px 16px;
+        font-size: 11px; color: #f87171; max-width: 600px; text-align: left;
+        white-space: pre-wrap; word-break: break-all; margin-top: 16px;
+        max-height: 200px; overflow-y: auto; display: none;
+      }
+    </style>
   </head>
   <body>
+    <!-- Loading screen (visible until React mounts) -->
+    <div id="pre-loader">
+      <div class="nb-logo">N</div>
+      <p>Loading Nexus Bank&hellip;</p>
+    </div>
+
+    <!-- Error fallback (shown if React fails to mount) -->
+    <div id="load-error">
+      <div style="font-size:48px;margin-bottom:14px">&#x1F3E6;</div>
+      <h2>Nexus Bank</h2>
+      <p>We encountered an issue loading the page. Please refresh or try again later.</p>
+      <button onclick="window.location.reload()">Refresh Page</button>
+      <pre id="err-detail"></pre>
+    </div>
+
+    <!-- React mounts here -->
     <div id="root"></div>
+
+    <!-- Vite entry point — DO NOT REMOVE -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      // Catch JS errors before React boots
+      window.__nbErrors = [];
+      window.addEventListener('error', function(e) {
+        window.__nbErrors.push((e.message || 'Unknown error') + ' @ ' + (e.filename || '') + ':' + (e.lineno || 0));
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        var msg = e.reason ? (e.reason.message || String(e.reason)) : 'Unhandled promise rejection';
+        window.__nbErrors.push('Promise rejection: ' + msg);
+      });
+
+      // After 10s, if #root is still empty → show error screen with collected errors
+      var _nbTimer = setTimeout(function() {
+        var root = document.getElementById('root');
+        if (!root || root.children.length === 0) {
+          document.getElementById('pre-loader').style.display = 'none';
+          var errEl = document.getElementById('load-error');
+          errEl.style.display = 'flex';
+          if (window.__nbErrors.length) {
+            var pre = document.getElementById('err-detail');
+            pre.style.display = 'block';
+            pre.textContent = window.__nbErrors.join('\n');
+          }
+        }
+      }, 10000);
+
+      // As soon as React puts something in #root, hide the pre-loader
+      (function watchRoot() {
+        var root = document.getElementById('root');
+        if (!root) { setTimeout(watchRoot, 50); return; }
+        var mo = new MutationObserver(function() {
+          if (root.children.length > 0) {
+            clearTimeout(_nbTimer);
+            var loader = document.getElementById('pre-loader');
+            loader.style.opacity = '0';
+            setTimeout(function() { loader.style.display = 'none'; }, 500);
+            mo.disconnect();
+          }
+        });
+        mo.observe(root, { childList: true });
+      })();
+    </script>
   </body>
 </html>
