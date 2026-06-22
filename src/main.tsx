@@ -40,26 +40,25 @@ class RootErrorBoundary extends Component<
           <p style={{ color: "rgba(255,255,255,0.65)", maxWidth: 440, lineHeight: 1.6 }}>
             We hit an unexpected error. Please refresh the page.
           </p>
-          {import.meta.env.DEV && (
-            <pre
-              style={{
-                marginTop: 20,
-                background: "rgba(255,255,255,0.08)",
-                borderRadius: 8,
-                padding: 16,
-                fontSize: 12,
-                color: "#f87171",
-                maxWidth: 600,
-                textAlign: "left",
-                whiteSpace: "pre-wrap",
-                wordBreak: "break-word",
-              }}
-            >
-              {(error as Error).message}
-              {"\n\n"}
-              {(error as Error).stack}
-            </pre>
-          )}
+          {/* Always show error details so we can debug production issues */}
+          <pre
+            style={{
+              marginTop: 20,
+              background: "rgba(255,255,255,0.08)",
+              borderRadius: 8,
+              padding: 16,
+              fontSize: 11,
+              color: "#f87171",
+              maxWidth: 640,
+              textAlign: "left",
+              whiteSpace: "pre-wrap",
+              wordBreak: "break-word",
+            }}
+          >
+            {(error as Error).message}
+            {"\n\n"}
+            {(error as Error).stack?.split("\n").slice(0, 8).join("\n")}
+          </pre>
           <button
             onClick={() => window.location.reload()}
             style={{
