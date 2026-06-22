@@ -22,16 +22,31 @@ const CHART_POINTS = [
 
 function AnimatedBalance({ target }: { target: number }) {
   const [display, setDisplay] = useState(target - 4820);
+  const rafRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   useEffect(() => {
     let current = target - 4820;
+    let stopped = false;
+
     const step = () => {
-      current += Math.ceil((target - current) * 0.04);
+      if (stopped) return;
+      const diff = target - current;
+      if (diff <= 1) {
+        setDisplay(target);
+        return;
+      }
+      current += Math.ceil(diff * 0.04);
       setDisplay(current);
-      if (current < target) setTimeout(step, 30);
+      rafRef.current = setTimeout(step, 30);
     };
-    const timeout = setTimeout(step, 600);
-    return () => clearTimeout(timeout);
+
+    rafRef.current = setTimeout(step, 600);
+    return () => {
+      stopped = true;
+      if (rafRef.current) clearTimeout(rafRef.current);
+    };
   }, [target]);
+
   return (
     <span>{display.toLocaleString("en-US", { style: "currency", currency: "USD" })}</span>
   );

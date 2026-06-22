@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { Component, type ReactNode } from "react";
+import { Component, Suspense, type ReactNode } from "react";
 import App from "./App";
 import "./index.css";
 
-// Top-level error boundary — prevents a JS crash from leaving a blank white page
+// ── Root Error Boundary ──────────────────────────────────────────────────────
+// Prevents any JS crash from leaving a blank white page.
 class RootErrorBoundary extends Component<
   { children: ReactNode },
   { error: Error | null }
@@ -15,8 +16,8 @@ class RootErrorBoundary extends Component<
   }
 
   render() {
-    if (this.state.error) {
-      const err = this.state.error as Error;
+    const { error } = this.state;
+    if (error) {
       return (
         <div
           style={{
@@ -32,18 +33,17 @@ class RootErrorBoundary extends Component<
             textAlign: "center",
           }}
         >
-          <div style={{ fontSize: 48, marginBottom: 16 }}>🏦</div>
-          <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>
+          <div style={{ fontSize: 52, marginBottom: 16 }}>🏦</div>
+          <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 12 }}>
             Nexus Bank
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.6)", maxWidth: 420 }}>
-            We hit an unexpected error. Please refresh the page or try again
-            later.
+          <p style={{ color: "rgba(255,255,255,0.65)", maxWidth: 440, lineHeight: 1.6 }}>
+            We hit an unexpected error. Please refresh the page.
           </p>
           {import.meta.env.DEV && (
             <pre
               style={{
-                marginTop: 24,
+                marginTop: 20,
                 background: "rgba(255,255,255,0.08)",
                 borderRadius: 8,
                 padding: 16,
@@ -55,22 +55,22 @@ class RootErrorBoundary extends Component<
                 wordBreak: "break-word",
               }}
             >
-              {err.message}
+              {(error as Error).message}
               {"\n\n"}
-              {err.stack}
+              {(error as Error).stack}
             </pre>
           )}
           <button
             onClick={() => window.location.reload()}
             style={{
               marginTop: 24,
-              padding: "12px 28px",
+              padding: "12px 32px",
               borderRadius: 100,
               background: "#0891b2",
               color: "#fff",
               border: "none",
               fontWeight: 600,
-              fontSize: 14,
+              fontSize: 15,
               cursor: "pointer",
             }}
           >
@@ -83,8 +83,49 @@ class RootErrorBoundary extends Component<
   }
 }
 
-createRoot(document.getElementById("root")!).render(
+// ── Loading fallback ─────────────────────────────────────────────────────────
+function PageLoader() {
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#071a3e",
+      }}
+    >
+      <div
+        style={{
+          width: 48,
+          height: 48,
+          borderRadius: 14,
+          background: "linear-gradient(135deg,#1d4ed8,#0891b2)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#fff",
+          fontWeight: 800,
+          fontSize: 20,
+          fontFamily: "sans-serif",
+          animation: "pulse 1.5s ease-in-out infinite",
+        }}
+      >
+        N
+      </div>
+      <style>{`@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}`}</style>
+    </div>
+  );
+}
+
+// ── Mount ────────────────────────────────────────────────────────────────────
+const root = document.getElementById("root");
+if (!root) throw new Error("No #root element found in index.html");
+
+createRoot(root).render(
   <RootErrorBoundary>
-    <App />
+    <Suspense fallback={<PageLoader />}>
+      <App />
+    </Suspense>
   </RootErrorBoundary>
 );

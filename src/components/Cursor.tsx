@@ -1,138 +1,113 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-type Particle = {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  opacity: number;
-  color: string;
-};
-
+/**
+ * Custom cursor — uses DOM manipulation directly instead of React state
+ * so it never triggers re-renders and can't cause a blank page crash.
+ */
 export default function CustomCursor() {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const followerRef = useRef<HTMLDivElement>(null);
-  const [particles, setParticles] = useState<Particle[]>([]);
-  const particleIdCounter = useRef(0);
-
-  const mousePosition = useRef({ x: 0, y: 0 });
-  const followerPosition = useRef({ x: 0, y: 0 });
-  const lastMousePos = useRef({ x: 0, y: 0 });
-  const isHovered = useRef(false);
+  const cursorRef    = useRef<HTMLDivElement>(null);
+  const followerRef  = useRef<HTMLDivElement>(null);
+  const trailsRef    = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      mousePosition.current = { x: e.clientX, y: e.clientY };
+    const cursor   = cursorRef.current;
+    const follower = followerRef.current;
+    const trails   = trailsRef.current;
+    if (!cursor || !follower || !trails) return;
 
-      const dist = Math.hypot(
-        e.clientX - lastMousePos.current.x,
-        e.clientY - lastMousePos.current.y,
-      );
+    let mx = -100, my = -100;
+    let fx = -100, fy = -100;
+    let isHovered = false;
+    let lastTrailX = -100, lastTrailY = -100;
+    let animId: number;
+    let trailId = 0;
 
-      if (dist > 8) {
-        const newParticle: Particle = {
-          id: particleIdCounter.current++,
-          x: e.clientX,
-          y: e.clientY,
-          size: Math.random() * 12 + 6,
-          opacity: 1,
-          color: isHovered.current ? "#ff00ff" : "#00d4ff",
-        };
-        setParticles((prev) => [...prev, newParticle]);
-        lastMousePos.current = { x: e.clientX, y: e.clientY };
+    const onMove = (e: MouseEvent) => {
+      mx = e.clientX;
+      my = e.clientY;
+
+      // Spawn trail particle if moved enough
+      const dist = Math.hypot(mx - lastTrailX, my - lastTrailY);
+      if (dist > 10 && trails) {
+        lastTrailX = mx;
+        lastTrailY = my;
+
+        const p = document.createElement("div");
+        const size = Math.random() * 8 + 4;
+        const color = isHovered ? "#ff00ff" : "#00d4ff";
+        p.style.cssText = `
+          position:fixed;pointer-events:none;z-index:9997;border-radius:50%;
+          left:${mx - size / 2}px;top:${my - size / 2}px;
+          width:${size}px;height:${size}px;
+          background:${color};box-shadow:0 0 8px ${color};
+          opacity:1;transition:opacity 0.4s,transform 0.4s;
+        `;
+        p.dataset.id = String(trailId++);
+        trails.appendChild(p);
+
+        // Fade out and remove
+        requestAnimationFrame(() => {
+          p.style.opacity = "0";
+          p.style.transform = "scale(0.2)";
+        });
+        setTimeout(() => p.remove(), 450);
+
+        // Cap DOM nodes
+        while (trails.children.length > 30) {
+          trails.removeChild(trails.firstChild!);
+        }
       }
     };
 
-    const animate = () => {
-      const { x, y } = mousePosition.current;
-
-      if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate3d(${x - 12}px, ${y - 12}px, 0)`;
-      }
-
-      const fx =
-        followerPosition.current.x + (x - followerPosition.current.x) * 0.12;
-      const fy =
-        followerPosition.current.y + (y - followerPosition.current.y) * 0.12;
-
-      followerPosition.current = { x: fx, y: fy };
-
-      if (followerRef.current) {
-        followerRef.current.style.transform = `translate3d(${fx - 24}px, ${fy - 24}px, 0)`;
-      }
-
-      setParticles((prev) =>
-        prev
-          .map((p) => ({
-            ...p,
-            opacity: p.opacity - 0.02,
-            size: p.size * 0.96,
-          }))
-          .filter((p) => p.opacity > 0),
-      );
-
-      requestAnimationFrame(animate);
-    };
-
-    const handleMouseEnter = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (
-        target.tagName === "A" ||
-        target.tagName === "BUTTON" ||
-        target.closest("a") ||
-        target.closest("button")
-      ) {
-        isHovered.current = true;
-        cursorRef.current?.classList.add("hovered");
-        followerRef.current?.classList.add("hovered");
+    const onOver = (e: MouseEvent) => {
+      const t = e.target as HTMLElement;
+      if (t.tagName === "A" || t.tagName === "BUTTON" || t.closest("a,button")) {
+        isHovered = true;
+        cursor.classList.add("hovered");
+        follower.classList.add("hovered");
       }
     };
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (
-        target.tagName === "A" ||
-        target.tagName === "BUTTON" ||
-        target.closest("a") ||
-        target.closest("button")
-      ) {
-        isHovered.current = false;
-        cursorRef.current?.classList.remove("hovered");
-        followerRef.current?.classList.remove("hovered");
+    const onOut = (e: MouseEvent) => {
+      const t = e.target as HTMLElement;
+      if (t.tagName === "A" || t.tagName === "BUTTON" || t.closest("a,button")) {
+        isHovered = false;
+        cursor.classList.remove("hovered");
+        follower.classList.remove("hovered");
       }
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseover", handleMouseEnter);
-    document.addEventListener("mouseout", handleMouseLeave);
-    requestAnimationFrame(animate);
+    const tick = () => {
+      // Main cursor — instant
+      cursor.style.transform = `translate3d(${mx - 12}px,${my - 12}px,0)`;
+
+      // Follower — lerp
+      fx += (mx - fx) * 0.12;
+      fy += (my - fy) * 0.12;
+      follower.style.transform = `translate3d(${fx - 24}px,${fy - 24}px,0)`;
+
+      animId = requestAnimationFrame(tick);
+    };
+
+    document.addEventListener("mousemove", onMove, { passive: true });
+    document.addEventListener("mouseover", onOver, { passive: true });
+    document.addEventListener("mouseout",  onOut,  { passive: true });
+    animId = requestAnimationFrame(tick);
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseover", handleMouseEnter);
-      document.removeEventListener("mouseout", handleMouseLeave);
+      cancelAnimationFrame(animId);
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseover", onOver);
+      document.removeEventListener("mouseout",  onOut);
     };
   }, []);
 
   return (
     <>
-      {particles.map((p) => (
-        <div
-          key={p.id}
-          className="cursor-trail"
-          style={{
-            left: `${p.x - p.size / 2}px`,
-            top: `${p.y - p.size / 2}px`,
-            width: `${p.size}px`,
-            height: `${p.size}px`,
-            opacity: p.opacity,
-            backgroundColor: p.color,
-            color: p.color,
-          }}
-        />
-      ))}
-      <div ref={cursorRef} className="cursor" />
-      <div ref={followerRef} className="cursor-follower" />
+      {/* Trail particles container — manipulated via DOM, no React state */}
+      <div ref={trailsRef} aria-hidden="true" />
+      <div ref={cursorRef}   className="cursor"          aria-hidden="true" />
+      <div ref={followerRef} className="cursor-follower" aria-hidden="true" />
     </>
   );
 }
