@@ -1,4 +1,4 @@
-import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { useEffect } from "react";
 import { AuthProvider } from "./context/AuthContext";
 import Header from "./components/Header";
@@ -24,9 +24,6 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 import "./index.css";
 
-// Always use root — Vercel serves from "/"
-const base = "";
-
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
@@ -42,6 +39,7 @@ function NoLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+// ScrollToTop must be OUTSIDE <Switch> — Switch only renders the first matching Route
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
@@ -52,64 +50,64 @@ function ScrollToTop() {
 
 function Router() {
   return (
-    <Switch>
+    <>
       <ScrollToTop />
-      <Route path="/">
-        <Layout><HomePage /></Layout>
-      </Route>
-      <Route path="/login">
-        <NoLayout><LoginPage /></NoLayout>
-      </Route>
-      <Route path="/open-account">
-        <Layout><OpenAccount /></Layout>
-      </Route>
-      <Route path="/account-pending">
-        <Layout><AccountPending /></Layout>
-      </Route>
-      <Route path="/personal">
-        <Layout><PersonalPage /></Layout>
-      </Route>
-      <Route path="/cooperate">
-        <Layout><CooperatePage /></Layout>
-      </Route>
-      <Route path="/insurance">
-        <Layout><InsurancePage /></Layout>
-      </Route>
-      <Route path="/mortgages">
-        <Layout><MortgagesPage /></Layout>
-      </Route>
-      <Route path="/savings">
-        <Layout><SavingsPage /></Layout>
-      </Route>
-      <Route path="/credit-cards">
-        <Layout><CreditCardsPage /></Layout>
-      </Route>
-      <Route path="/business-loans">
-        <Layout><BusinessLoansPage /></Layout>
-      </Route>
-      <Route path="/about">
-        <Layout><AboutPage /></Layout>
-      </Route>
-      <Route path="/contact">
-        <Layout><ContactPage /></Layout>
-      </Route>
-      <Route path="/admin-support">
-        <NoLayout><AdminSupportPage /></NoLayout>
-      </Route>
-      <Route>
-        <Layout><NotFoundPage /></Layout>
-      </Route>
-    </Switch>
+      <Switch>
+        <Route path="/">
+          <Layout><HomePage /></Layout>
+        </Route>
+        <Route path="/login">
+          <NoLayout><LoginPage /></NoLayout>
+        </Route>
+        <Route path="/open-account">
+          <Layout><OpenAccount /></Layout>
+        </Route>
+        <Route path="/account-pending">
+          <Layout><AccountPending /></Layout>
+        </Route>
+        <Route path="/personal">
+          <Layout><PersonalPage /></Layout>
+        </Route>
+        <Route path="/cooperate">
+          <Layout><CooperatePage /></Layout>
+        </Route>
+        <Route path="/insurance">
+          <Layout><InsurancePage /></Layout>
+        </Route>
+        <Route path="/mortgages">
+          <Layout><MortgagesPage /></Layout>
+        </Route>
+        <Route path="/savings">
+          <Layout><SavingsPage /></Layout>
+        </Route>
+        <Route path="/credit-cards">
+          <Layout><CreditCardsPage /></Layout>
+        </Route>
+        <Route path="/business-loans">
+          <Layout><BusinessLoansPage /></Layout>
+        </Route>
+        <Route path="/about">
+          <Layout><AboutPage /></Layout>
+        </Route>
+        <Route path="/contact">
+          <Layout><ContactPage /></Layout>
+        </Route>
+        <Route path="/admin-support">
+          <NoLayout><AdminSupportPage /></NoLayout>
+        </Route>
+        <Route>
+          <Layout><NotFoundPage /></Layout>
+        </Route>
+      </Switch>
+    </>
   );
 }
 
 export default function App() {
   return (
     <AuthProvider>
-      <WouterRouter base={base}>
-        <CustomCursor />
-        <Router />
-      </WouterRouter>
+      <CustomCursor />
+      <Router />
     </AuthProvider>
   );
 }
