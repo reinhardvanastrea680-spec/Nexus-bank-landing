@@ -1,14 +1,18 @@
 import { useEffect } from "react";
 
-// Dashboard URL — update this to your deployed dashboard URL
-const DASHBOARD_LOGIN_URL = (import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app") + "/login";
+const DASHBOARD_URL = import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app";
+const LOGIN_URL     = `${DASHBOARD_URL}/login`;
 
+/**
+ * /login on the landing page — immediately redirects to the dashboard login.
+ * This is a fallback in case someone navigates here directly.
+ */
 export default function LoginPage() {
   useEffect(() => {
-    window.location.href = DASHBOARD_LOGIN_URL;
+    // Use replace so the back button doesn't loop back here
+    window.location.replace(LOGIN_URL);
   }, []);
 
-  // Fallback UI while redirecting
   return (
     <div style={{
       minHeight: "100vh",
@@ -16,23 +20,34 @@ export default function LoginPage() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      background: "linear-gradient(135deg, #F0F4F8 0%, #E4EDF9 100%)",
+      background: "#071a3e",
       fontFamily: "Inter, sans-serif",
     }}>
       <div style={{
-        width: 52,
-        height: 52,
+        width: 56,
+        height: 56,
         borderRadius: 14,
-        background: "linear-gradient(135deg, #1D4ED8, #0EA5E9)",
+        background: "linear-gradient(135deg, #1d4ed8, #0891b2)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         marginBottom: 20,
-        fontSize: 24,
-        fontWeight: 700,
+        fontSize: 26,
+        fontWeight: 800,
         color: "#fff",
-      }}>N</div>
-      <p style={{ color: "#64748B", fontSize: 15 }}>Redirecting to your dashboard…</p>
+        boxShadow: "0 0 30px rgba(8,145,178,0.4)",
+      }}>
+        N
+      </div>
+      <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 15 }}>
+        Redirecting to your dashboard…
+      </p>
+      <style>{`
+        @keyframes pulse {
+          0%,100% { opacity: 1; }
+          50%      { opacity: 0.4; }
+        }
+      `}</style>
     </div>
   );
 }
