@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import HeroCanvas from "../components/HeroCanvas";
+import HeroScene from "../components/HeroScene";
 
 const UNSPLASH = "https://images.unsplash.com";
 
@@ -88,7 +90,9 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="hero">
-        <div className="container">
+        <div className="hero-grid-bg" />
+        <HeroCanvas />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className="hero-grid">
             <div className="hero-content">
               <div className="section-label">🏦 Trusted Since 2005 · FDIC Insured</div>
@@ -123,21 +127,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="hero-image-wrap">
-              <div className="hero-img">
-                <img
-                  src={`${UNSPLASH}/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80`}
-                  alt="Nexus Bank Digital Banking"
-                />
-              </div>
-              <div className="hero-float-card">
-                <div className="hero-float-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div>
-                  <div className="hero-float-label">Bank-Grade Security</div>
-                  <div className="hero-float-val">256-bit Encrypted</div>
-                </div>
-              </div>
+              <HeroScene />
             </div>
           </div>
         </div>

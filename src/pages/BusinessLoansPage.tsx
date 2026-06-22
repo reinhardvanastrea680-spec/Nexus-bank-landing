@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function BusinessLoansPage() {
   return (
@@ -18,7 +18,7 @@ export default function BusinessLoansPage() {
         <div className="container">
           <div className="two-col">
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80`} alt="Business Loans" />
+              <PageScene theme="loans" />
             </div>
             <div>
               <div className="section-label">Business Funding</div>

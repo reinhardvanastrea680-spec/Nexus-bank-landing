@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function AboutPage() {
   return (
@@ -32,7 +32,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80`} alt="About Nexus Bank" />
+              <PageScene theme="about" />
             </div>
           </div>
         </div>

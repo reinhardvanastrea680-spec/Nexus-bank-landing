@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function InsurancePage() {
   return (
@@ -18,7 +18,7 @@ export default function InsurancePage() {
         <div className="container">
           <div className="two-col">
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80`} alt="Insurance" />
+              <PageScene theme="insurance" />
             </div>
             <div>
               <div className="section-label">Peace of Mind</div>

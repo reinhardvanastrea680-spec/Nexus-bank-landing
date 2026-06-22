@@ -1,6 +1,5 @@
 import { Link } from "wouter";
-
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function PersonalPage() {
   return (
@@ -19,7 +18,7 @@ export default function PersonalPage() {
         <div className="container">
           <div className="two-col">
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80`} alt="Personal Banking" />
+              <PageScene theme="personal" />
             </div>
             <div>
               <div className="section-label">Personal Accounts</div>
@@ -77,7 +76,7 @@ export default function PersonalPage() {
               </div>
             </div>
             <div className="cta-img">
-              <img src={`${UNSPLASH}/photo-1580048915913-4f8f5cb481c4?auto=format&fit=crop&w=700&q=80`} alt="Mobile Banking" />
+              <img src="https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?auto=format&fit=crop&w=700&q=80" alt="Mobile Banking" />
             </div>
           </div>
         </div>

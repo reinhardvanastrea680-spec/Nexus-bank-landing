@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function CreditCardsPage() {
   return (
@@ -31,7 +31,7 @@ export default function CreditCardsPage() {
               <Link href="/open-account" className="btn btn-primary">Apply for a Card</Link>
             </div>
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1565372195458-9de0b320ef04?auto=format&fit=crop&w=800&q=80`} alt="Credit Cards" />
+              <PageScene theme="cards" />
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function CooperatePage() {
   return (
@@ -34,7 +34,7 @@ export default function CooperatePage() {
               <Link href="/open-account" className="btn btn-primary">Open Business Account</Link>
             </div>
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80`} alt="Business Banking" />
+              <PageScene theme="business" />
             </div>
           </div>
         </div>

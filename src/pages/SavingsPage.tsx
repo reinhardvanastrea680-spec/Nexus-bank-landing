@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function SavingsPage() {
   return (
@@ -18,7 +18,7 @@ export default function SavingsPage() {
         <div className="container">
           <div className="two-col">
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80`} alt="Savings" />
+              <PageScene theme="savings" />
             </div>
             <div>
               <div className="section-label">Grow Your Wealth</div>

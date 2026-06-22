@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-const UNSPLASH = "https://images.unsplash.com";
+import PageScene from "../components/PageScene";
 
 export default function MortgagesPage() {
   return (
@@ -37,7 +37,7 @@ export default function MortgagesPage() {
               <Link href="/contact" className="btn btn-primary">Get Pre-Approved</Link>
             </div>
             <div className="two-col-img">
-              <img src={`${UNSPLASH}/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80`} alt="Mortgages" />
+              <PageScene theme="mortgage" />
             </div>
           </div>
         </div>
