@@ -1,10 +1,11 @@
 import { Switch, Route, useLocation } from "wouter";
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { AuthProvider } from "./context/AuthContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Topbar from "./components/Topbar";
 import CustomCursor from "./components/Cursor";
+import SplashScreen from "./components/SplashScreen";
 
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -104,10 +105,26 @@ function Router() {
 }
 
 export default function App() {
+  // Show splash only once per browser session
+  const [splashDone, setSplashDone] = useState(() => {
+    return sessionStorage.getItem("nb_splash_done") === "1";
+  });
+
+  const handleSplashDone = useCallback(() => {
+    sessionStorage.setItem("nb_splash_done", "1");
+    setSplashDone(true);
+  }, []);
+
   return (
     <AuthProvider>
-      <CustomCursor />
-      <Router />
+      {!splashDone && <SplashScreen onDone={handleSplashDone} />}
+      <div style={{
+        opacity: splashDone ? 1 : 0,
+        transition: splashDone ? "opacity 0.5s ease" : "none",
+      }}>
+        <CustomCursor />
+        <Router />
+      </div>
     </AuthProvider>
   );
 }
