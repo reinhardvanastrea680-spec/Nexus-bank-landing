@@ -61,7 +61,7 @@ const tabs = [
 const faqs = [
   {
     q: "How do I open a Nexsus Bank account online?",
-    a: "Opening an account is quick and paperless. Click 'Open Account', complete our 4-step digital application, and submit your identification documents. Once approved, your account details will be sent directly to you. Most applications are reviewed within 1–3 business days.",
+    a: "Opening an account is quick and paperless. Click 'Open Account', complete our 4 step digital application, and submit your identification documents. Once approved, your account details will be sent directly to you. Most applications are reviewed within 1 to 3 business days.",
   },
   {
     q: "Is Nexsus Bank FDIC insured?",
@@ -280,7 +280,7 @@ export default function HomePage() {
           </div>
           <div className="why-grid">
             {[
-              { num: "01", title: "Unmatched Security", desc: "bank grade 256-bit encryption and multi-factor authentication on every account.", img: `${UNSPLASH}/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80` },
+              { num: "01", title: "Unmatched Security", desc: "bank grade 256 bit encryption and multi factor authentication on every account.", img: `${UNSPLASH}/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80` },
               { num: "02", title: "Cash Flow Optimisation", desc: "Smart tools to improve cash flow through structured savings and budgeting strategies.", img: `${UNSPLASH}/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=700&q=80` },
               { num: "03", title: "Always Accessible", desc: "24/7 online banking, mobile app, and customer support. Banking on your schedule.", img: `${UNSPLASH}/photo-1580048915913-4f8f5cb481c4?auto=format&fit=crop&w=700&q=80` },
             ].map((w) => (
@@ -312,7 +312,7 @@ export default function HomePage() {
           <div className="approach-grid">
             {[
               { tag: "Transparency", title: "No Hidden Fees. Ever.", desc: "Every charge is disclosed upfront. What you see is what you pay.", img: `${UNSPLASH}/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80`, accent: false },
-              { tag: "Innovation", title: "We craft strategies aligned with your financial goals", desc: "Personalised plans built with AI-driven insights.", img: `${UNSPLASH}/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80`, accent: false },
+              { tag: "Innovation", title: "We craft strategies aligned with your financial goals", desc: "Personalised plans built with AI driven insights.", img: `${UNSPLASH}/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Accessibility", title: "Enrol for Online Banking in Minutes", desc: "100% digital, secure, and paperless account opening.", img: `${UNSPLASH}/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Partnership", title: "Your Success Is Our Success", desc: "A dedicated relationship manager for every account.", img: `${UNSPLASH}/photo-1579621970588-a35d0e7ab9b6?auto=format&fit=crop&w=600&q=80`, accent: true },
             ].map((a) => (
@@ -362,7 +362,7 @@ export default function HomePage() {
           <div className="cta-inner">
             <div>
               <div className="cta-badge">
-                <span>🛡️ FDIC-Insured · Backed by the U.S. Government</span>
+                <span>🛡️ FDIC Insured · Backed by the U.S. Government</span>
               </div>
               <h2 className="cta-title">Take control of your financial future today</h2>
               <p className="cta-desc">

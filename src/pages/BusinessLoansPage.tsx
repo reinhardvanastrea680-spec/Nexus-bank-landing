@@ -26,10 +26,10 @@ export default function BusinessLoansPage() {
               <p>From startup loans to expansion financing, Nexsus Bank provides tailored lending solutions with competitive rates. Apply online in 10 minutes — get a decision in 24 hours.</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, margin: "24px 0 28px" }}>
                 {[
-                  { label: "$10k–$5M", sub: "Loan amount range" },
+                  { label: "$10k to $5M", sub: "Loan amount range" },
                   { label: "From 6.9%", sub: "Starting APR" },
                   { label: "24 hrs", sub: "Decision time" },
-                  { label: "1–10 yr", sub: "Flexible terms" },
+                  { label: "1 to 10 yr", sub: "Flexible terms" },
                 ].map((s) => (
                   <div key={s.label} style={{ padding: "16px", background: "var(--bg-white)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", textAlign: "center" }}>
                     <div style={{ fontSize: 18, fontWeight: 800, color: "var(--blue)", fontFamily: "var(--font-head)" }}>{s.label}</div>

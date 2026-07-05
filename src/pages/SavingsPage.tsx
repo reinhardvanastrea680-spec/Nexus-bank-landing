@@ -42,7 +42,7 @@ export default function SavingsPage() {
             {[
               { icon: "📈", bg: "rgba(29,78,216,0.08)", title: "High Yield Savings", desc: "Earn 4.75% APY with no minimum balance. Instant access to your funds anytime. Perfect for emergency funds and short term goals." },
               { icon: "🎯", bg: "rgba(16,185,129,0.08)", title: "Goal Savings Account", desc: "Set a savings goal and automate your contributions. Track your progress in Real time. Great for vacations, weddings, or a new car." },
-              { icon: "📅", bg: "rgba(245,158,11,0.08)", title: "Fixed-Term Deposit", desc: "Lock in a guaranteed rate for 3, 6, 12, or 24 months. Earn up to 5.25% APY. Ideal for funds you won't need immediately." },
+              { icon: "📅", bg: "rgba(245,158,11,0.08)", title: "Fixed Term Deposit", desc: "Lock in a guaranteed rate for 3, 6, 12, or 24 months. Earn up to 5.25% APY. Ideal for funds you won't need immediately." },
             ].map((c) => (
               <div className="feature-card" key={c.title}>
                 <div className="feature-icon" style={{ background: c.bg }}>{c.icon}</div>

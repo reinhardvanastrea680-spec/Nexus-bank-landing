@@ -20,7 +20,7 @@ export default function CreditCardsPage() {
             <div>
               <div className="section-label">Smart Spending</div>
               <h2 className="section-title">Credit cards that reward your lifestyle</h2>
-              <p>Nexsus Bank credit cards offer cashback, travel rewards, and purchase protection — with no annual fee on our entry-level card. Manage your card, set spending limits, and freeze your card instantly via the app.</p>
+              <p>Nexsus Bank credit cards offer cashback, travel rewards, and purchase protection — with no annual fee on our entry level card. Manage your card, set spending limits, and freeze your card instantly via the app.</p>
               <ul style={{ display: "flex", flexDirection: "column", gap: 10, margin: "24px 0 28px" }}>
                 {["Up to 3% cashback on everyday purchases","0% APR for first 12 months (intro offer)","Travel insurance and purchase protection included","Instant card freeze via mobile app","Apple Pay, Google Pay, and Samsung Pay compatible","No foreign transaction fees on premium cards"].map((i) => (
                   <li key={i} style={{ display: "flex", gap: 10, fontSize: 14, color: "var(--text-body)" }}>

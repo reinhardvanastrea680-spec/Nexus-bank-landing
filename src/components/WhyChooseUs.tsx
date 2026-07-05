@@ -17,7 +17,7 @@ const items = [
     num: "03",
     image: "why-choose-image-3.jpg",
     title: "financial accountability",
-    desc: "Stay on track with your financial goals through regular check-ins",
+    desc: "Stay on track with your financial goals through regular check ins",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
             <div className="section-title-content">
               <p>
                 Our team of experienced professionals delivers personalized,
-                results-driven financial strategies tailored to your unique
+                results driven financial strategies tailored to your unique
                 goals. We prioritize transparency, trust, and long term success.
               </p>
             </div>
