@@ -159,8 +159,8 @@ export default function HomePage() {
               <div className="section-label">About Nexsus Bank</div>
               <h2 className="section-title">Empowering individuals & businesses with trusted financial services</h2>
               <p className="section-subtitle" style={{ marginBottom: 8 }}>
-                Since 2005, Nexsus Bank has been at the forefront of community-focused banking.
-                We combine the reliability of a full-service bank with the speed and convenience of modern fintech.
+                Since 2005, Nexsus Bank has been at the forefront of community focused banking.
+                We combine the reliability of a full service bank with the speed and convenience of modern fintech.
               </p>
               <div className="about-features">
                 <div className="about-feat">
@@ -174,14 +174,14 @@ export default function HomePage() {
                   <div className="about-feat-icon teal">🎯</div>
                   <div>
                     <div className="about-feat-title">Personalised Solutions</div>
-                    <p className="about-feat-desc">Every product is tailored to your life stage and financial goals — never one-size-fits-all.</p>
+                    <p className="about-feat-desc">Every product is tailored to your life stage and financial goals — never one size fits all.</p>
                   </div>
                 </div>
                 <div className="about-feat">
                   <div className="about-feat-icon gold">📈</div>
                   <div>
                     <div className="about-feat-title">Proven Results</div>
-                    <p className="about-feat-desc">98% customer satisfaction, award-winning digital platform, and industry-leading return rates.</p>
+                    <p className="about-feat-desc">98% customer satisfaction, award winning digital platform, and industry leading return rates.</p>
                   </div>
                 </div>
               </div>

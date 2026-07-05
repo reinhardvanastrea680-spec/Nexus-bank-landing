@@ -148,48 +148,119 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* ── Contact Info Cards ── */}
-      <section style={{ background: "var(--primary)", padding: "48px 0 0" }}>
+      {/* ── Brand Logo Section ── */}
+      <section style={{ background: "var(--primary)", padding: "64px 0 48px" }}>
         <div className="container">
           <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: 20,
-            marginBottom: 48,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            gap: 32,
           }}>
-            {[
-              { icon: "📍", title: "Head Office",  lines: ["214 North Tryon Street", "Charlotte, NC 28202"] },
-              { icon: "📞", title: "Phone",        lines: ["1-800-555-1234", "Mon–Fri, 8am–8pm EST"] },
-              { icon: "✉️", title: "Email",        lines: ["support@nexusbank.com", "Response within 24 hours"] },
-              { icon: "🕒", title: "Hours",        lines: ["24/7 Online Banking", "Mon–Fri 8am–8pm (Branches)"] },
-            ].map((c) => (
-              <div key={c.title}
-                style={{
-                  background: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  borderRadius: 16, padding: "24px 20px",
-                  display: "flex", gap: 16, alignItems: "flex-start",
-                  transition: "background 0.2s",
+            {/* Professional bank logo */}
+            <div style={{
+              width: 120,
+              height: 120,
+              borderRadius: 28,
+              background: "linear-gradient(135deg, #1d4ed8, #0891b2)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 20px 60px rgba(8,145,178,0.35), 0 0 0 1px rgba(255,255,255,0.1)",
+              position: "relative",
+            }}>
+              <div style={{
+                fontSize: 56,
+                fontWeight: 900,
+                color: "#fff",
+                fontFamily: "var(--font-head)",
+                letterSpacing: -2,
+              }}>N</div>
+              {/* Glow effect */}
+              <div style={{
+                position: "absolute",
+                inset: -2,
+                borderRadius: 28,
+                background: "linear-gradient(135deg, rgba(29,78,216,0.4), rgba(8,145,178,0.4))",
+                filter: "blur(20px)",
+                zIndex: -1,
+              }} />
+            </div>
+
+            {/* Bank name and tagline */}
+            <div>
+              <h2 style={{
+                fontFamily: "var(--font-head)",
+                fontSize: 42,
+                fontWeight: 900,
+                color: "#fff",
+                marginBottom: 12,
+                letterSpacing: -1,
+              }}>
+                Nexsus Bank
+              </h2>
+              <p style={{
+                color: "rgba(255,255,255,0.75)",
+                fontSize: 18,
+                fontWeight: 500,
+                letterSpacing: 0.5,
+              }}>
+                Banking Beyond Boundaries
+              </p>
+            </div>
+
+            {/* Trust badges */}
+            <div style={{
+              display: "flex",
+              gap: 28,
+              flexWrap: "wrap",
+              justifyContent: "center",
+              marginTop: 16,
+            }}>
+              {[
+                { icon: "🏛️", label: "FDIC Insured", sub: "Up to $250,000" },
+                { icon: "🔒", label: "Bank-Grade Security", sub: "256-bit Encryption" },
+                { icon: "⚡", label: "24/7 Support", sub: "Always Available" },
+                { icon: "🌍", label: "Global Access", sub: "40+ Currencies" },
+              ].map((badge) => (
+                <div key={badge.label} style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 8,
+                  padding: "20px 24px",
+                  background: "rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  borderRadius: 16,
+                  minWidth: 140,
+                  transition: "all 0.2s",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-                onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.06)")}
-              >
-                <div style={{ fontSize: 28, flexShrink: 0, lineHeight: 1 }}>{c.icon}</div>
-                <div>
-                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "var(--teal-light)", marginBottom: 6 }}>
-                    {c.title}
-                  </div>
-                  {c.lines.map((l, i) => (
-                    <div key={i} style={{
-                      fontSize: i === 0 ? 14 : 12,
-                      color: i === 0 ? "#fff" : "rgba(255,255,255,0.5)",
-                      fontWeight: i === 0 ? 600 : 400,
-                      lineHeight: 1.5,
-                    }}>{l}</div>
-                  ))}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.12)";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.08)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                }}
+                >
+                  <div style={{ fontSize: 32 }}>{badge.icon}</div>
+                  <div style={{
+                    fontSize: 13,
+                    fontWeight: 700,
+                    color: "#fff",
+                    textAlign: "center",
+                  }}>{badge.label}</div>
+                  <div style={{
+                    fontSize: 11,
+                    color: "rgba(255,255,255,0.6)",
+                    textAlign: "center",
+                  }}>{badge.sub}</div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -308,13 +379,12 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* Phone */}
                   <div>
                     <label className="form-label">Phone (optional)</label>
                     <input
                       className="form-control"
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+1 (555) 000 0000"
                       value={chatInfo.phone}
                       onChange={(e) => setChatInfo((p) => ({ ...p, phone: e.target.value }))}
                     />
@@ -566,8 +636,8 @@ export default function ContactPage() {
             marginTop: 32, flexWrap: "wrap",
           }}>
             {[
-              { icon: "📞", label: "Call us", sub: "1-800-555-1234" },
-              { icon: "✉️", label: "Email us", sub: "support@nexusbank.com" },
+              { icon: "📞", label: "Call us", sub: "1 800 555 1234" },
+              { icon: "✉️", label: "Email us", sub: "support@nexsusbank.com" },
               { icon: "💼", label: "Open an account", sub: "Get started in minutes" },
             ].map((item) => (
               <div key={item.label} style={{
