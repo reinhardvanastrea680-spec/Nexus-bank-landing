@@ -23,7 +23,7 @@ export default function SavingsPage() {
             <div>
               <div className="section-label">Grow Your Wealth</div>
               <h2 className="section-title">Make your money work harder for you</h2>
-              <p>Nexus Bank offers some of the highest savings rates in the country. Whether you're building an emergency fund, saving for a major purchase, or growing long-term wealth — we have a savings account for you.</p>
+              <p>Nexsus Bank offers some of the highest savings rates in the country. Whether you're building an emergency fund, saving for a major purchase, or growing long-term wealth — we have a savings account for you.</p>
               <div style={{ background: "var(--bg-white)", border: "2px solid var(--blue)", borderRadius: "var(--radius-lg)", padding: "24px", margin: "24px 0 28px" }}>
                 <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 4 }}>Current High-Yield Savings Rate</div>
                 <div style={{ fontFamily: "var(--font-head)", fontSize: 48, fontWeight: 800, color: "var(--blue)", lineHeight: 1 }}>4.75% <span style={{ fontSize: 18, color: "var(--text-muted)" }}>APY</span></div>

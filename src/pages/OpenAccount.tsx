@@ -174,7 +174,7 @@ export default function OpenAccount() {
       <div className="container" style={{ maxWidth: 720 }}>
         <div style={{ textAlign: "center", marginBottom: 36 }}>
           <div className="section-label">New Account</div>
-          <h1 className="section-title">Open Your Nexus Bank Account</h1>
+          <h1 className="section-title">Open Your Nexsus Bank Account</h1>
           <p className="section-subtitle" style={{ margin: "0 auto" }}>
             Complete the steps below. Your information is encrypted and 100%
             secure.

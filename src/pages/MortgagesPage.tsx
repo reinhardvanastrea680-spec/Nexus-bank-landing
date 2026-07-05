@@ -20,7 +20,7 @@ export default function MortgagesPage() {
             <div>
               <div className="section-label">Home Ownership</div>
               <h2 className="section-title">Your dream home starts here</h2>
-              <p>Nexus Bank offers a range of mortgage products designed to fit every buyer — from first-time homeowners to seasoned investors. Our mortgage specialists guide you from pre-approval to closing.</p>
+              <p>Nexsus Bank offers a range of mortgage products designed to fit every buyer — from first-time homeowners to seasoned investors. Our mortgage specialists guide you from pre-approval to closing.</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, margin: "24px 0 28px" }}>
                 {[
                   { label: "From 3.5% APR", sub: "Fixed 30-year rate" },

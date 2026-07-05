@@ -60,15 +60,15 @@ const tabs = [
 
 const faqs = [
   {
-    q: "How do I open a Nexus Bank account online?",
+    q: "How do I open a Nexsus Bank account online?",
     a: "Opening an account is quick and paperless. Click 'Open Account', complete our 4-step digital application, and submit your identification documents. Once approved, your account details will be sent directly to you. Most applications are reviewed within 1–3 business days.",
   },
   {
-    q: "Is Nexus Bank FDIC insured?",
-    a: "Yes. Nexus Bank is a Member FDIC institution. Your deposits are insured up to $250,000 per depositor, per ownership category, as backed by the full faith and credit of the United States Government.",
+    q: "Is Nexsus Bank FDIC insured?",
+    a: "Yes. Nexsus Bank is a Member FDIC institution. Your deposits are insured up to $250,000 per depositor, per ownership category, as backed by the full faith and credit of the United States Government.",
   },
   {
-    q: "What do I need to apply for a mortgage with Nexus Bank?",
+    q: "What do I need to apply for a mortgage with Nexsus Bank?",
     a: "You'll need proof of income (pay stubs, W-2s or tax returns), a government-issued photo ID, details of any existing debts, and a credit score check. Our mortgage specialists will guide you through the entire process at no cost.",
   },
   {
@@ -76,8 +76,8 @@ const faqs = [
     a: "Login credentials are issued by our banking team after your account has been verified and activated. Once your account is approved, you will receive your username and temporary password by secure mail or email. Contact our support team if you need assistance.",
   },
   {
-    q: "Can I access Nexus Bank internationally?",
-    a: "Yes. Nexus Bank offers international wire transfers and our mobile app works globally. Currency exchange services are available for 40+ currencies with competitive mid-market rates and no hidden fees.",
+    q: "Can I access Nexsus Bank internationally?",
+    a: "Yes. Nexsus Bank offers international wire transfers and our mobile app works globally. Currency exchange services are available for 40+ currencies with competitive mid-market rates and no hidden fees.",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function HomePage() {
                 Banking <span>Beyond</span><br />Boundaries
               </h1>
               <p className="hero-desc">
-                Nexus Bank delivers world-class personal and business banking,
+                Nexsus Bank delivers world-class personal and business banking,
                 secure, digital and built around your life.
               </p>
               <div className="hero-actions">
@@ -152,14 +152,14 @@ export default function HomePage() {
             <div className="about-img">
               <img
                 src={`${UNSPLASH}/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80`}
-                alt="About Nexus Bank"
+                alt="About Nexsus Bank"
               />
             </div>
             <div>
-              <div className="section-label">About Nexus Bank</div>
+              <div className="section-label">About Nexsus Bank</div>
               <h2 className="section-title">Empowering individuals & businesses with trusted financial services</h2>
               <p className="section-subtitle" style={{ marginBottom: 8 }}>
-                Since 2005, Nexus Bank has been at the forefront of community-focused banking.
+                Since 2005, Nexsus Bank has been at the forefront of community-focused banking.
                 We combine the reliability of a full-service bank with the speed and convenience of modern fintech.
               </p>
               <div className="about-features">
@@ -231,7 +231,7 @@ export default function HomePage() {
               <h2 className="section-title">Driving innovation and excellence in finance</h2>
             </div>
             <p className="section-subtitle">
-              Nexus Bank's forward-thinking approach combines cutting-edge technology with deep financial expertise.
+              Nexsus Bank's forward-thinking approach combines cutting-edge technology with deep financial expertise.
             </p>
           </div>
           <div style={{ marginTop: 36 }}>
@@ -366,7 +366,7 @@ export default function HomePage() {
               </div>
               <h2 className="cta-title">Take control of your financial future today</h2>
               <p className="cta-desc">
-                Nexus Bank has made it easy for everyone to harness their financial potential. Open your account in minutes — no branch visit required.
+                Nexsus Bank has made it easy for everyone to harness their financial potential. Open your account in minutes — no branch visit required.
               </p>
               <div className="cta-actions">
                 <Link href="/open-account" className="btn btn-gold btn-lg">Get Started Today</Link>

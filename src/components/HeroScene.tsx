@@ -187,7 +187,7 @@ export default function HeroScene() {
         <div className="tx-icon">{tx.icon}</div>
         <div className="tx-info">
           <div className="tx-label">{tx.label}</div>
-          <div className="tx-sub">Just now · Nexus Bank</div>
+          <div className="tx-sub">Just now · Nexsus Bank</div>
         </div>
         <div className="tx-amount" style={{ color: tx.color }}>{tx.amount}</div>
       </div>

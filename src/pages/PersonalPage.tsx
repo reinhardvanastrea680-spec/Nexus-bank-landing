@@ -23,9 +23,9 @@ export default function PersonalPage() {
             <div>
               <div className="section-label">Personal Accounts</div>
               <h2 className="section-title">Banking that fits your lifestyle</h2>
-              <p>Whether you're saving for a home, managing day-to-day expenses, or building your future — Nexus Bank has an account for every stage of your life. Enjoy 0% fees on transfers, instant mobile deposits, and 24/7 support.</p>
+              <p>Whether you're saving for a home, managing day-to-day expenses, or building your future — Nexsus Bank has an account for every stage of your life. Enjoy 0% fees on transfers, instant mobile deposits, and 24/7 support.</p>
               <ul style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 28 }}>
-                {["Zero monthly maintenance fee on qualifying accounts","Unlimited free transfers between Nexus Bank accounts","Real-time transaction alerts and spending insights","Earn interest on your everyday balance","FDIC insured up to $250,000"].map((i) => (
+                {["Zero monthly maintenance fee on qualifying accounts","Unlimited free transfers between Nexsus Bank accounts","Real-time transaction alerts and spending insights","Earn interest on your everyday balance","FDIC insured up to $250,000"].map((i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 14, color: "var(--text-body)" }}>
                     <span style={{ color: "var(--green)", fontWeight: 700, marginTop: 1 }}>✓</span>{i}
                   </li>
@@ -69,7 +69,7 @@ export default function PersonalPage() {
             <div>
               <div className="section-label">Get Started</div>
               <h2 className="cta-title">Open your account in under 10 minutes</h2>
-              <p className="cta-desc">No branch visit needed. Fully digital, fully secure. Open your Nexus Bank personal account today and start banking smarter.</p>
+              <p className="cta-desc">No branch visit needed. Fully digital, fully secure. Open your Nexsus Bank personal account today and start banking smarter.</p>
               <div className="cta-actions">
                 <Link href="/open-account" className="btn btn-gold btn-lg">Open Account Now</Link>
                 <Link href="/contact" className="btn btn-outline-white">Ask a Question</Link>

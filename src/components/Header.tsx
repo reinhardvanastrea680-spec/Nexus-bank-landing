@@ -39,7 +39,7 @@ export default function Header() {
             <Link href="/" className="header-logo">
               <div className="logo-mark">N</div>
               <div>
-                <div className="logo-text">Nexus Bank</div>
+                <div className="logo-text">Nexsus Bank</div>
                 <div className="logo-sub">Banking Beyond Boundaries</div>
               </div>
             </Link>
@@ -98,7 +98,7 @@ export default function Header() {
         <button className="mobile-menu-close" onClick={() => setMenuOpen(false)}>✕</button>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
           <div className="logo-mark">N</div>
-          <div className="logo-text">Nexus Bank</div>
+          <div className="logo-text">Nexsus Bank</div>
         </div>
         <nav className="mobile-nav">
           {navLinks.map((n) => (

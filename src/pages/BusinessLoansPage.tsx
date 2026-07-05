@@ -23,7 +23,7 @@ export default function BusinessLoansPage() {
             <div>
               <div className="section-label">Business Funding</div>
               <h2 className="section-title">The capital you need to grow</h2>
-              <p>From startup loans to expansion financing, Nexus Bank provides tailored lending solutions with competitive rates. Apply online in 10 minutes — get a decision in 24 hours.</p>
+              <p>From startup loans to expansion financing, Nexsus Bank provides tailored lending solutions with competitive rates. Apply online in 10 minutes — get a decision in 24 hours.</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, margin: "24px 0 28px" }}>
                 {[
                   { label: "$10k–$5M", sub: "Loan amount range" },

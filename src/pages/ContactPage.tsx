@@ -47,7 +47,7 @@ export default function ContactPage() {
       });
       // Welcome message from admin
       await addDoc(collection(db, "prospectiveChats", id, "messages"), {
-        text: `Hi ${chatInfo.name}! 👋 Welcome to Nexus Bank. How can we help you today?`,
+        text: `Hi ${chatInfo.name}! 👋 Welcome to Nexsus Bank. How can we help you today?`,
         sender: "admin",
         createdAt: serverTimestamp(),
       });
@@ -143,7 +143,7 @@ export default function ContactPage() {
               <a href="/">Home</a><span>›</span><span>Contact</span>
             </div>
             <h1>Talk to Us, Live</h1>
-            <p>Connect with a Nexus Bank specialist instantly. Real people, real answers, 24/7.</p>
+            <p>Connect with a Nexsus Bank specialist instantly. Real people, real answers, 24/7.</p>
           </div>
         </div>
       </div>
@@ -554,7 +554,7 @@ export default function ContactPage() {
                   background: "#fff",
                   borderTop: "1px solid var(--border)",
                 }}>
-                  🔒 Encrypted · Powered by Nexus Bank Live Support
+                  🔒 Encrypted · Powered by Nexsus Bank Live Support
                 </div>
               </>
             )}
@@ -602,7 +602,7 @@ export default function ContactPage() {
               Find a Branch Near You
             </h2>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 15, maxWidth: 480, margin: "0 auto" }}>
-              With branches across the United States and a world-class digital platform, Nexus Bank is always within reach.
+              With branches across the United States and a world-class digital platform, Nexsus Bank is always within reach.
             </p>
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>

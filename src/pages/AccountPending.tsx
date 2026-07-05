@@ -20,7 +20,7 @@ export default function AccountPending() {
             Reference: {ref}
           </p>
           <p style={{ marginTop: 16 }}>
-            Thank you for applying to open a Nexus Bank account. Your application is now being reviewed by our team.
+            Thank you for applying to open a Nexsus Bank account. Your application is now being reviewed by our team.
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 12, background: "var(--bg-light)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", padding: "16px 20px", margin: "24px 0", justifyContent: "center" }}>
             <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(29,78,216,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>🔍</div>

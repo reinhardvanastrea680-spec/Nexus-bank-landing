@@ -20,7 +20,7 @@ export default function CooperatePage() {
             <div>
               <div className="section-label">Business Solutions</div>
               <h2 className="section-title">Banking that grows with your business</h2>
-              <p>From solo entrepreneurs to established enterprises, Nexus Bank provides the financial infrastructure to run your business with confidence. Access credit, manage payroll, and handle international payments — all in one platform.</p>
+              <p>From solo entrepreneurs to established enterprises, Nexsus Bank provides the financial infrastructure to run your business with confidence. Access credit, manage payroll, and handle international payments — all in one platform.</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 24, marginBottom: 28 }}>
                 {[
                   { icon: "🏢", label: "Business Checking" }, { icon: "💰", label: "Business Savings" },

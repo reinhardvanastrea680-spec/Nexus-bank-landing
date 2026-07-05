@@ -86,7 +86,7 @@ export default function AdminSupportPage() {
             <div style={{ fontSize: "32px" }}>🔧</div>
             <div>
               <h1 style={{ color: "#fff", fontFamily: "var(--font-head)", fontSize: "24px", margin: 0 }}>
-                Nexus Bank Admin Support
+                Nexsus Bank Admin Support
               </h1>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "13px", margin: 0 }}>
                 Manage customer conversations

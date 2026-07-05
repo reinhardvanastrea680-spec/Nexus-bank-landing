@@ -8,10 +8,10 @@ export default function Footer() {
           <div className="footer-brand">
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
               <div className="logo-mark">N</div>
-              <div className="logo-text" style={{ color: "#fff" }}>Nexus Bank</div>
+              <div className="logo-text" style={{ color: "#fff" }}>Nexsus Bank</div>
             </div>
             <p>
-              Nexus Bank is your digital banking partner, offering
+              Nexsus Bank is your digital banking partner, offering
               secure, accessible, and innovative financial solutions for
               individuals and businesses across the United States.
               Member FDIC. Equal Housing Lender.
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 Nexus Bank, N.A. All Rights Reserved. Member FDIC · Equal Housing Lender</p>
+          <p>© 2025 Nexsus Bank, N.A. All Rights Reserved. Member FDIC · Equal Housing Lender</p>
           <div className="footer-socials">
             <a href="#" className="footer-social-link" aria-label="Facebook">f</a>
             <a href="#" className="footer-social-link" aria-label="Twitter">𝕏</a>
