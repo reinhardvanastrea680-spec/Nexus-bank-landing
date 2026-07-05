@@ -227,7 +227,7 @@ function SavingsScene() {
 
       {/* APY hero */}
       <div style={{ position: "absolute", top: 28, left: 0, right: 0, textAlign: "center" }}>
-        <div style={{ fontSize: 10, color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: 2, marginBottom: 4 }}>Current High-Yield Rate</div>
+        <div style={{ fontSize: 10, color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: 2, marginBottom: 4 }}>Current High Yield Rate</div>
         <div style={{ fontSize: 56, fontWeight: 900, color: "#10b981", fontFamily: "var(--font-head)", lineHeight: 1, textShadow: "0 0 40px rgba(16,185,129,0.4)" }}>4.75%</div>
         <div style={{ fontSize: 14, color: "rgba(255,255,255,0.55)", marginTop: 4 }}>Annual Percentage Yield</div>
       </div>
@@ -267,7 +267,7 @@ function MortgageScene() {
   }, []);
 
   const steps = [
-    { label: "Pre-Approval", done: true },
+    { label: "pre approval", done: true },
     { label: "Application", done: true },
     { label: "Appraisal", done: true },
     { label: "Underwriting", done: false },

@@ -27,7 +27,7 @@ const tabs = [
   {
     id: "risk",
     label: "Risk Management",
-    desc: "Our risk management solutions protect your assets and financial wellbeing through comprehensive analysis and proactive strategies designed for long-term stability.",
+    desc: "Our risk management solutions protect your assets and financial wellbeing through comprehensive analysis and proactive strategies designed for long term stability.",
     items: [
       { icon: "icon-expertise-list-1.svg", title: "expert investment management", desc: "Strategic investment guidance tailored to your goals" },
       { icon: "icon-expertise-list-2.svg", title: "Social Security and Pension Optimization", desc: "Maximize your retirement income and benefits" },

@@ -398,7 +398,7 @@ export default function ContactPage() {
                     border: "1px solid rgba(8,145,178,0.12)",
                     borderRadius: 12,
                   }}>
-                    {["🔒 End-to-end encrypted", "🛡️ Your data is never shared", "⚡ Instant connection"].map((b) => (
+                    {["🔒 End to end encrypted", "🛡️ Your data is never shared", "⚡ Instant connection"].map((b) => (
                       <span key={b} style={{ fontSize: 12, color: "var(--text-muted)", fontWeight: 500 }}>{b}</span>
                     ))}
                   </div>
@@ -672,7 +672,7 @@ export default function ContactPage() {
               Find a Branch Near You
             </h2>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 15, maxWidth: 480, margin: "0 auto" }}>
-              With branches across the United States and a world-class digital platform, Nexsus Bank is always within reach.
+              With branches across the United States and a world class digital platform, Nexsus Bank is always within reach.
             </p>
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>

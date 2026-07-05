@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
               <p>
                 Our team of experienced professionals delivers personalized,
                 results-driven financial strategies tailored to your unique
-                goals. We prioritize transparency, trust, and long-term success.
+                goals. We prioritize transparency, trust, and long term success.
               </p>
             </div>
           </div>

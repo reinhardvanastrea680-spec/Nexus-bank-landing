@@ -23,7 +23,7 @@ export default function PersonalPage() {
             <div>
               <div className="section-label">Personal Accounts</div>
               <h2 className="section-title">Banking that fits your lifestyle</h2>
-              <p>Whether you're saving for a home, managing day-to-day expenses, or building your future — Nexsus Bank has an account for every stage of your life. Enjoy 0% fees on transfers, instant mobile deposits, and 24/7 support.</p>
+              <p>Whether you're saving for a home, managing day to day expenses, or building your future — Nexsus Bank has an account for every stage of your life. Enjoy 0% fees on transfers, instant mobile deposits, and 24/7 support.</p>
               <ul style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 28 }}>
                 {["Zero monthly maintenance fee on qualifying accounts","Unlimited free transfers between Nexsus Bank accounts","Real-time transaction alerts and spending insights","Earn interest on your everyday balance","FDIC insured up to $250,000"].map((i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 14, color: "var(--text-body)" }}>
@@ -48,7 +48,7 @@ export default function PersonalPage() {
           <div className="feature-grid">
             {[
               { icon: "💳", bg: "rgba(29,78,216,0.08)", title: "Nexus Everyday Checking", desc: "Our flagship checking account — no monthly fees, unlimited transactions, and a free debit card. Access your money anywhere, anytime.", badge: "Most Popular" },
-              { icon: "🏦", bg: "rgba(8,145,178,0.08)", title: "Nexus High-Yield Savings", desc: "Earn up to 4.75% APY on your savings. No minimum balance required. Watch your money grow automatically.", badge: "Best Rate" },
+              { icon: "🏦", bg: "rgba(8,145,178,0.08)", title: "Nexus High Yield Savings", desc: "Earn up to 4.75% APY on your savings. No minimum balance required. Watch your money grow automatically.", badge: "Best Rate" },
               { icon: "👨‍👩‍👧", bg: "rgba(245,158,11,0.08)", title: "Joint Account", desc: "Manage household finances together. Both account holders get full access, separate cards, and shared statements.", badge: "For Families" },
             ].map((c) => (
               <div className="feature-card" key={c.title} style={{ position: "relative" }}>

@@ -15,7 +15,7 @@ const tabs = [
   {
     id: "financial",
     label: "Financial Planning",
-    desc: "Our financial planning team helps you achieve your short and long-term goals with personalised strategies built around your unique situation.",
+    desc: "Our financial planning team helps you achieve your short and long term goals with personalised strategies built around your unique situation.",
     items: [
       { icon: "📊", title: "Portfolio Management", desc: "Smart asset allocation across stocks, bonds, and real estate" },
       { icon: "🔐", title: "Retirement Planning", desc: "Maximize your pension and social security benefits" },
@@ -100,7 +100,7 @@ export default function HomePage() {
                 Banking <span>Beyond</span><br />Boundaries
               </h1>
               <p className="hero-desc">
-                Nexsus Bank delivers world-class personal and business banking,
+                Nexsus Bank delivers world class personal and business banking,
                 secure, digital and built around your life.
               </p>
               <div className="hero-actions">
@@ -231,7 +231,7 @@ export default function HomePage() {
               <h2 className="section-title">Driving innovation and excellence in finance</h2>
             </div>
             <p className="section-subtitle">
-              Nexsus Bank's forward-thinking approach combines cutting-edge technology with deep financial expertise.
+              Nexsus Bank's forward-thinking approach combines cutting edge technology with deep financial expertise.
             </p>
           </div>
           <div style={{ marginTop: 36 }}>
