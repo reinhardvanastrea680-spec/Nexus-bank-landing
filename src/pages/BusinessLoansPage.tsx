@@ -50,7 +50,7 @@ export default function BusinessLoansPage() {
             {[
               { icon: "💼", bg: "rgba(29,78,216,0.08)", title: "Term Loans", desc: "Lump-sum financing for equipment, expansion, or acquisitions. Fixed monthly payments and transparent rates." },
               { icon: "🔄", bg: "rgba(8,145,178,0.08)", title: "Business Line of Credit", desc: "Draw funds when you need them. Only pay interest on what you use. Perfect for managing cash flow." },
-              { icon: "⚡", bg: "rgba(245,158,11,0.08)", title: "SBA Loans", desc: "Government-backed loans with lower down payments and extended repayment terms. We're a Preferred SBA Lender." },
+              { icon: "⚡", bg: "rgba(245,158,11,0.08)", title: "SBA Loans", desc: "government backed loans with lower down payments and extended repayment terms. We're a Preferred SBA Lender." },
             ].map((c) => (
               <div className="feature-card" key={c.title}>
                 <div className="feature-icon" style={{ background: c.bg }}>{c.icon}</div>

@@ -28,7 +28,7 @@ const tabs = [
     label: "Business Banking",
     desc: "From startup to enterprise, our business banking solutions are designed to help you grow, manage cash flow, and access capital when you need it.",
     items: [
-      { icon: "🏢", title: "Business Checking", desc: "Zero-fee business accounts with unlimited transactions" },
+      { icon: "🏢", title: "Business Checking", desc: "Zero fee business accounts with unlimited transactions" },
       { icon: "💳", title: "Corporate Cards", desc: "Business credit cards with expense management tools" },
       { icon: "🚀", title: "Growth Financing", desc: "Lines of credit and term loans for expansion" },
     ],
@@ -37,11 +37,11 @@ const tabs = [
   {
     id: "digital",
     label: "Digital Banking",
-    desc: "Our mobile platform gives you complete control of your finances, anywhere, anytime, with bank-grade security and an intuitive interface.",
+    desc: "Our mobile platform gives you complete control of your finances, anywhere, anytime, with bank grade security and an intuitive interface.",
     items: [
       { icon: "📱", title: "Mobile App", desc: "iOS and Android app with full account management" },
       { icon: "⚡", title: "Instant Transfers", desc: "Send money in seconds with Zelle® integration" },
-      { icon: "🔔", title: "Smart Alerts", desc: "Real-time notifications for every transaction" },
+      { icon: "🔔", title: "Smart Alerts", desc: "Real time notifications for every transaction" },
     ],
     image: `${UNSPLASH}/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=700&q=80`,
   },
@@ -50,7 +50,7 @@ const tabs = [
     label: "Wealth Management",
     desc: "Our dedicated wealth managers work alongside you to preserve, grow, and transfer your wealth with confidence across generations.",
     items: [
-      { icon: "💎", title: "Private Banking", desc: "Exclusive services for high-net-worth individuals" },
+      { icon: "💎", title: "Private Banking", desc: "Exclusive services for high net worth individuals" },
       { icon: "🌍", title: "Global Investing", desc: "Access to international markets and currencies" },
       { icon: "🏠", title: "Real Estate Financing", desc: "Premium mortgage and refinancing solutions" },
     ],
@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: "What do I need to apply for a mortgage with Nexsus Bank?",
-    a: "You'll need proof of income (pay stubs, W-2s or tax returns), a government-issued photo ID, details of any existing debts, and a credit score check. Our mortgage specialists will guide you through the entire process at no cost.",
+    a: "You'll need proof of income (pay stubs, W2s or tax returns), a government issued photo ID, details of any existing debts, and a credit score check. Our mortgage specialists will guide you through the entire process at no cost.",
   },
   {
     q: "How can I get my login credentials?",
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Can I access Nexsus Bank internationally?",
-    a: "Yes. Nexsus Bank offers international wire transfers and our mobile app works globally. Currency exchange services are available for 40+ currencies with competitive mid-market rates and no hidden fees.",
+    a: "Yes. Nexsus Bank offers international wire transfers and our mobile app works globally. Currency exchange services are available for 40+ currencies with competitive mid market rates and no hidden fees.",
   },
 ];
 
@@ -280,7 +280,7 @@ export default function HomePage() {
           </div>
           <div className="why-grid">
             {[
-              { num: "01", title: "Unmatched Security", desc: "Bank-grade 256-bit encryption and multi-factor authentication on every account.", img: `${UNSPLASH}/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80` },
+              { num: "01", title: "Unmatched Security", desc: "bank grade 256-bit encryption and multi-factor authentication on every account.", img: `${UNSPLASH}/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80` },
               { num: "02", title: "Cash Flow Optimisation", desc: "Smart tools to improve cash flow through structured savings and budgeting strategies.", img: `${UNSPLASH}/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=700&q=80` },
               { num: "03", title: "Always Accessible", desc: "24/7 online banking, mobile app, and customer support. Banking on your schedule.", img: `${UNSPLASH}/photo-1580048915913-4f8f5cb481c4?auto=format&fit=crop&w=700&q=80` },
             ].map((w) => (

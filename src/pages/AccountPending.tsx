@@ -35,7 +35,7 @@ export default function AccountPending() {
           <div style={{ background: "var(--bg-light)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", padding: "24px", marginBottom: 24, textAlign: "left" }}>
             <h4 style={{ fontSize: 14, fontWeight: 700, color: "var(--text-dark)", marginBottom: 14 }}>What happens next?</h4>
             {[
-              { step: "1", label: "Identity Verification", desc: "We verify your government-issued ID and personal details (1–2 days)" },
+              { step: "1", label: "Identity Verification", desc: "We verify your government issued ID and personal details (1–2 days)" },
               { step: "2", label: "Account Activation", desc: "Your account is created and assigned a unique account number" },
               { step: "3", label: "Credentials Delivery", desc: "Your login username and temporary password are sent to your email" },
               { step: "4", label: "Start Banking", desc: "Log in, set your permanent password, and begin using your account" },

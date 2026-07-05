@@ -221,7 +221,7 @@ export default function ContactPage() {
             }}>
               {[
                 { icon: "🏛️", label: "FDIC Insured", sub: "Up to $250,000" },
-                { icon: "🔒", label: "Bank-Grade Security", sub: "256-bit Encryption" },
+                { icon: "🔒", label: "bank grade Security", sub: "256-bit Encryption" },
                 { icon: "⚡", label: "24/7 Support", sub: "Always Available" },
                 { icon: "🌍", label: "Global Access", sub: "40+ Currencies" },
               ].map((badge) => (

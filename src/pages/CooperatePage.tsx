@@ -52,7 +52,7 @@ export default function CooperatePage() {
             {[
               { icon: "📊", bg: "rgba(29,78,216,0.08)", title: "Business Checking", desc: "Unlimited transactions, free incoming wires, and a dedicated relationship manager. No surprise fees." },
               { icon: "🚀", bg: "rgba(16,185,129,0.08)", title: "Merchant Services", desc: "Accept payments online and in-store. Point-of-sale solutions, invoicing, and next-day settlement." },
-              { icon: "🌐", bg: "rgba(245,158,11,0.08)", title: "International Payments", desc: "Send and receive funds in 40+ currencies at mid-market rates. Same-day international transfers available." },
+              { icon: "🌐", bg: "rgba(245,158,11,0.08)", title: "International Payments", desc: "Send and receive funds in 40+ currencies at mid market rates. Same-day international transfers available." },
             ].map((c) => (
               <div className="feature-card" key={c.title}>
                 <div className="feature-icon" style={{ background: c.bg }}>{c.icon}</div>

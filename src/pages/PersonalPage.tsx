@@ -25,7 +25,7 @@ export default function PersonalPage() {
               <h2 className="section-title">Banking that fits your lifestyle</h2>
               <p>Whether you're saving for a home, managing day to day expenses, or building your future — Nexsus Bank has an account for every stage of your life. Enjoy 0% fees on transfers, instant mobile deposits, and 24/7 support.</p>
               <ul style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 28 }}>
-                {["Zero monthly maintenance fee on qualifying accounts","Unlimited free transfers between Nexsus Bank accounts","Real-time transaction alerts and spending insights","Earn interest on your everyday balance","FDIC insured up to $250,000"].map((i) => (
+                {["Zero monthly maintenance fee on qualifying accounts","Unlimited free transfers between Nexsus Bank accounts","Real time transaction alerts and spending insights","Earn interest on your everyday balance","FDIC insured up to $250,000"].map((i) => (
                   <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 14, color: "var(--text-body)" }}>
                     <span style={{ color: "var(--green)", fontWeight: 700, marginTop: 1 }}>✓</span>{i}
                   </li>

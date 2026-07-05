@@ -509,7 +509,7 @@ export default function OpenAccount() {
                   set={set}
                 >
                   <div className="form-help">
-                    For verification purposes only. We use bank-grade
+                    For verification purposes only. We use bank grade
                     encryption.
                   </div>
                   {errors.ssnLast4 && (
