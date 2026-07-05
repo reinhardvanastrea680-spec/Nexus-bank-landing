@@ -6,4 +6,4 @@ const rootEl = document.getElementById("root")!;
 createRoot(rootEl).render(<App />);
 
 // Debug: confirm React mounted - remove this after confirming site works
-console.log("[Nexus] React mounted. Root children:", rootEl.children.length);
+console.log("[Nexsus] React mounted. Root children:", rootEl.children.length);

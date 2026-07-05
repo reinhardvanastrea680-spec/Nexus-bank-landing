@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
  * Cinematic intro splash — shows for ~2.8s then fades out.
  * Sequence:
  *   0.0s  — dark screen, "N" scales in with glow
- *   0.8s  — "exus Bank" types in beside "N"
+ *   0.8s  — "exsus Bank" types in beside "N"
  *   1.6s  — tagline fades in below
  *   2.2s  — particle ring expands outward
  *   2.6s  — whole splash fades out → main page revealed
@@ -136,7 +136,7 @@ export default function SplashScreen({ onDone }: { onDone: () => void }) {
             color: "#fff",
             letterSpacing: -0.5,
           }}>
-            exus Bank
+            exsus Bank
           </span>
         </div>
       </div>

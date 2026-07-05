@@ -373,9 +373,9 @@ function InsuranceScene() {
 
 function CardsScene() {
   const cards = [
-    { name: "Nexus Platinum", gradient: ["#1e3a5f", "#0d2060"], cashback: "3%", reward: "Travel Miles" },
-    { name: "Nexus Gold", gradient: ["#b45309", "#d97706"], cashback: "2%", reward: "Cash Back" },
-    { name: "Nexus Classic", gradient: ["#1d4ed8", "#0891b2"], cashback: "1.5%", reward: "Points" },
+    { name: "Nexsus Platinum", gradient: ["#1e3a5f", "#0d2060"], cashback: "3%", reward: "Travel Miles" },
+    { name: "Nexsus Gold", gradient: ["#b45309", "#d97706"], cashback: "2%", reward: "Cash Back" },
+    { name: "Nexsus Classic", gradient: ["#1d4ed8", "#0891b2"], cashback: "1.5%", reward: "Points" },
   ];
 
   return (

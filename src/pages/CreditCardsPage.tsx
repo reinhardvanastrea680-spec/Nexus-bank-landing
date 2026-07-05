@@ -42,9 +42,9 @@ export default function CreditCardsPage() {
           <div className="section-header"><div><div className="section-label">Our Cards</div><h2 className="section-title">Choose the perfect card</h2></div></div>
           <div className="feature-grid">
             {[
-              { icon: "🌱", bg: "rgba(16,185,129,0.08)", title: "Nexus Classic", desc: "No annual fee. 1% cashback on all purchases. Perfect for building credit or everyday spending.", badge: "No Fee" },
-              { icon: "⭐", bg: "rgba(29,78,216,0.08)", title: "Nexus Rewards+", desc: "2% cashback on groceries and fuel, 1% everywhere else. $95 annual fee with $200 sign-up bonus.", badge: "Best Value" },
-              { icon: "💎", bg: "rgba(245,158,11,0.08)", title: "Nexus Platinum", desc: "3% cashback, airport lounge access, travel insurance, and concierge service. $395/year.", badge: "Premium" },
+              { icon: "🌱", bg: "rgba(16,185,129,0.08)", title: "Nexsus Classic", desc: "No annual fee. 1% cashback on all purchases. Perfect for building credit or everyday spending.", badge: "No Fee" },
+              { icon: "⭐", bg: "rgba(29,78,216,0.08)", title: "Nexsus Rewards+", desc: "2% cashback on groceries and fuel, 1% everywhere else. $95 annual fee with $200 sign up bonus.", badge: "Best Value" },
+              { icon: "💎", bg: "rgba(245,158,11,0.08)", title: "Nexsus Platinum", desc: "3% cashback, airport lounge access, travel insurance, and concierge service. $395/year.", badge: "Premium" },
             ].map((c) => (
               <div className="feature-card" key={c.title} style={{ position: "relative" }}>
                 <span className="badge badge-teal" style={{ position: "absolute", top: 16, right: 16 }}>{c.badge}</span>

@@ -521,7 +521,7 @@ export default function ContactPage() {
                             fontSize: 10, fontWeight: 700, color: "var(--teal)",
                             textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 4,
                           }}>
-                            Nexus Support
+                            Nexsus Support
                           </div>
                         )}
                         <div style={{ fontSize: 14, lineHeight: 1.55 }}>{m.text}</div>

@@ -25,7 +25,7 @@ export default function MortgagesPage() {
                 {[
                   { label: "From 3.5% APR", sub: "Fixed 30 year rate" },
                   { label: "5% Down", sub: "Minimum deposit" },
-                  { label: "$50k–$2M", sub: "Loan range" },
+                  { label: "$50k to $2M", sub: "Loan range" },
                   { label: "30 day", sub: "Average closing time" },
                 ].map((s) => (
                   <div key={s.label} style={{ padding: "16px", background: "var(--bg-white)", border: "1px solid var(--border)", borderRadius: "var(--radius-md)", textAlign: "center" }}>
@@ -49,7 +49,7 @@ export default function MortgagesPage() {
           <div className="feature-grid">
             {[
               { icon: "🏡", bg: "rgba(16,185,129,0.08)", title: "Fixed Rate Mortgage", desc: "Lock in your rate for 10, 15, 20, or 30 years. Predictable monthly payments that never change — ideal for long term homeowners." },
-              { icon: "📉", bg: "rgba(29,78,216,0.08)", title: "Adjustable Rate (ARM)", desc: "Start with a low introductory rate that adjusts periodically. Great if you plan to sell or refinance within 5–7 years." },
+              { icon: "📉", bg: "rgba(29,78,216,0.08)", title: "Adjustable Rate (ARM)", desc: "Start with a low introductory rate that adjusts periodically. Great if you plan to sell or refinance within 5 to 7 years." },
               { icon: "✨", bg: "rgba(245,158,11,0.08)", title: "first time Buyer", desc: "Specially designed for first time buyers — reduced down payment requirements, government backed options, and free guidance." },
             ].map((c) => (
               <div className="feature-card" key={c.title}>

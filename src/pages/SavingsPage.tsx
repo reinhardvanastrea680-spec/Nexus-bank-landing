@@ -8,7 +8,7 @@ export default function SavingsPage() {
         <div className="container">
           <div className="page-banner-inner">
             <div className="breadcrumb"><a href="/">Home</a><span>›</span><span>Savings</span></div>
-            <h1>Nexus Savings</h1>
+            <h1>Nexsus Savings</h1>
             <p>Industry leading interest rates to help your money grow faster.</p>
           </div>
         </div>

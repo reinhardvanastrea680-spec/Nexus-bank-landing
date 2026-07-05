@@ -275,7 +275,7 @@ export default function HomePage() {
               <h2 className="section-title">Client Focused Solutions for Lasting Success</h2>
             </div>
             <p className="section-subtitle">
-              Our experienced professionals deliver personalised, results-driven financial strategies.
+              Our experienced professionals deliver personalised, results driven financial strategies.
             </p>
           </div>
           <div className="why-grid">
