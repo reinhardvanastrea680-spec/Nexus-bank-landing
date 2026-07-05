@@ -39,13 +39,12 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4>Contact Us</h4>
+            <h4>Resources</h4>
             <ul>
-              <li><span>📍 214 North Tryon Street</span></li>
-              <li><span>Charlotte, NC 28202</span></li>
-              <li><a href="mailto:support@nexusbank.com">support@nexusbank.com</a></li>
-              <li><a href="tel:18005551234">1-800-555-1234</a></li>
               <li><Link href="/contact">Support Center</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/">Security</Link></li>
+              <li><Link href="/">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
