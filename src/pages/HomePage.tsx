@@ -311,7 +311,7 @@ export default function HomePage() {
           </div>
           <div className="approach-grid">
             {[
-              { tag: "Transparency", title: "No Hidden Fees. Ever.", desc: "Every charge is disclosed upfront. What you see is what you pay.", img: `${UNSPLASH}/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=600&q=80`, accent: false },
+              { tag: "Transparency", title: "No Hidden Fees. Ever.", desc: "Every charge is disclosed upfront. What you see is what you pay.", img: `${UNSPLASH}/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Innovation", title: "We craft strategies aligned with your financial goals", desc: "Personalised plans built with AI driven insights.", img: `${UNSPLASH}/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Accessibility", title: "Enrol for Online Banking in Minutes", desc: "100% digital, secure, and paperless account opening.", img: `${UNSPLASH}/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=600&q=80`, accent: false },
               { tag: "Partnership", title: "Your Success Is Our Success", desc: "A dedicated relationship manager for every account.", img: `${UNSPLASH}/photo-1579621970588-a35d0e7ab9b6?auto=format&fit=crop&w=600&q=80`, accent: true },
