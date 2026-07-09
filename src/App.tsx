@@ -20,6 +20,7 @@ import CreditCardsPage from "./pages/CreditCardsPage";
 import BusinessLoansPage from "./pages/BusinessLoansPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import AdminSupportPage from "./pages/AdminSupportPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -92,6 +93,9 @@ function Router() {
         </Route>
         <Route path="/contact">
           <Layout><ContactPage /></Layout>
+        </Route>
+        <Route path="/privacy-policy">
+          <Layout><PrivacyPolicyPage /></Layout>
         </Route>
         <Route path="/admin-support">
           <NoLayout><AdminSupportPage /></NoLayout>

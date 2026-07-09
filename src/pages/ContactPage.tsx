@@ -630,33 +630,7 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* Help links below chat */}
-          <div style={{
-            display: "flex", justifyContent: "center", gap: 32,
-            marginTop: 32, flexWrap: "wrap",
-          }}>
-            {[
-              { icon: "📞", label: "Call us", sub: "1 800 555 1234" },
-              { icon: "✉️", label: "Email us", sub: "support@nexsusbank.com" },
-              { icon: "💼", label: "Open an account", sub: "Get started in minutes" },
-            ].map((item) => (
-              <div key={item.label} style={{
-                display: "flex", alignItems: "center", gap: 12,
-                background: "#fff",
-                border: "1px solid var(--border)",
-                borderRadius: 14,
-                padding: "14px 20px",
-                minWidth: 200,
-                boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
-              }}>
-                <div style={{ fontSize: 24 }}>{item.icon}</div>
-                <div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: "var(--text-dark)" }}>{item.label}</div>
-                  <div style={{ fontSize: 12, color: "var(--text-muted)" }}>{item.sub}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 
