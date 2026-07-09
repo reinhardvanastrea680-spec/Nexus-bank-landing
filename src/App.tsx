@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Topbar from "./components/Topbar";
 import CustomCursor from "./components/Cursor";
 import SplashScreen from "./components/SplashScreen";
+import CookieBanner from "./components/CookieBanner";
 
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -128,6 +129,7 @@ export default function App() {
       }}>
         <CustomCursor />
         <Router />
+        <CookieBanner />
       </div>
     </AuthProvider>
   );
