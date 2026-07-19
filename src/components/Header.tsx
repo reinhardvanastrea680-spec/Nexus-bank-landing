@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 
 // Hardcoded dashboard URL — overridable via env var
 // Strip trailing /login if someone set VITE_DASHBOARD_URL with it already included
-const DASHBOARD_URL = (import.meta.env.VITE_DASHBOARD_URL || "https://nexus-bank-mu.vercel.app")
+const DASHBOARD_URL = (import.meta.env.VITE_DASHBOARD_URL || "https://portal.nexsus-co.com")
   .replace(/\/login\/?$/, "");
 const LOGIN_URL = `${DASHBOARD_URL}/login`;
 
