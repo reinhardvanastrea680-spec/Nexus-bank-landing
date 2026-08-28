@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /open-account
+Disallow: /account-pending
+Disallow: /admin-support
