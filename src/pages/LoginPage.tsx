@@ -19,8 +19,8 @@ export default function LoginPage() {
   }, []);
 
   useEffect(() => {
-    // Use replace so the back button doesn't loop back here
-    window.location.replace(LOGIN_URL);
+    // Prevent automatic redirect - let user click manually
+    // Automatic redirects to login pages trigger phishing detection
   }, []);
 
   return (
@@ -49,9 +49,27 @@ export default function LoginPage() {
       }}>
         N
       </div>
-      <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 15 }}>
-        Redirecting to your dashboard…
+      <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 15, marginBottom: 24 }}>
+        Access your secure banking portal
       </p>
+      <a 
+        href={LOGIN_URL}
+        style={{
+          padding: "14px 32px",
+          background: "linear-gradient(135deg, #1d4ed8, #0891b2)",
+          color: "#fff",
+          textDecoration: "none",
+          borderRadius: 8,
+          fontWeight: 600,
+          fontSize: 15,
+          boxShadow: "0 4px 14px rgba(29,78,216,0.4)",
+          transition: "transform 0.2s",
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = "translateY(-2px)"}
+        onMouseLeave={(e) => e.currentTarget.style.transform = "translateY(0)"}
+      >
+        Continue to Login →
+      </a>
       <style>{`
         @keyframes pulse {
           0%,100% { opacity: 1; }
